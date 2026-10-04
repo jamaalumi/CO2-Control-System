@@ -10,6 +10,10 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
+// ============================================================
+// HARDWARE
+// ============================================================
+
 HardwareSerial RS485(1);
 
 Preferences preferences;
@@ -21,13 +25,19 @@ Adafruit_SSD1306 display(
     -1
 );
 
-SemaphoreHandle_t sensorDataMutex = nullptr;
+// ============================================================
+// FREERTOS OBJECTS
+// ============================================================
 
+SemaphoreHandle_t sensorDataMutex = nullptr;
 SemaphoreHandle_t rs485Mutex = nullptr;
 
 QueueHandle_t uiEventQueue = nullptr;
-
 QueueHandle_t setpointQueue = nullptr;
+
+// ============================================================
+// SHARED DATA
+// ============================================================
 
 SensorData sharedSensorData =
 {
@@ -36,12 +46,16 @@ SensorData sharedSensorData =
     0.0f,
     0,
     0,
+    0,
     false
 };
 
-static uint16_t currentSetpoint = 1500;
-
+static uint16_t currentSetpoint = DEFAULT_SETPOINT;
 static bool controllerSafetyMode = false;
+
+// ============================================================
+// RS485
+// ============================================================
 
 static void rs485TransmitMode()
 {
@@ -62,6 +76,10 @@ static void rs485ReceiveMode()
         LOW
     );
 }
+
+// ============================================================
+// MODBUS CRC
+// ============================================================
 
 static uint16_t modbusCRC(
     const uint8_t *buffer,
@@ -91,6 +109,10 @@ static uint16_t modbusCRC(
     return crc;
 }
 
+// ============================================================
+// MODBUS READ
+// ============================================================
+
 bool modbusReadHoldingRegisters(
     uint8_t slaveAddress,
     uint16_t startRegister,
@@ -98,12 +120,7 @@ bool modbusReadHoldingRegisters(
     uint16_t *buffer
 )
 {
-    if (quantity == 0)
-    {
-        return false;
-    }
-
-    if (quantity > 16)
+    if (quantity == 0 || quantity > 16)
     {
         return false;
     }
@@ -111,7 +128,6 @@ bool modbusReadHoldingRegisters(
     uint8_t request[8];
 
     request[0] = slaveAddress;
-
     request[1] = 0x03;
 
     request[2] =
@@ -195,10 +211,7 @@ bool modbusReadHoldingRegisters(
         return false;
     }
 
-    if (
-        response[2] !=
-        quantity * 2
-    )
+    if (response[2] != quantity * 2)
     {
         return false;
     }
@@ -235,6 +248,10 @@ bool modbusReadHoldingRegisters(
     return true;
 }
 
+// ============================================================
+// MODBUS WRITE
+// ============================================================
+
 bool modbusWriteRegister(
     uint8_t slaveAddress,
     uint16_t registerAddress,
@@ -244,7 +261,6 @@ bool modbusWriteRegister(
     uint8_t request[8];
 
     request[0] = slaveAddress;
-
     request[1] = 0x06;
 
     request[2] =
@@ -343,20 +359,21 @@ bool modbusWriteRegister(
     return true;
 }
 
+// ============================================================
+// SENSOR READING
+// ============================================================
+
 bool readMioSensors(
     SensorData &data
 )
 {
     uint16_t value;
 
-    if (
-        !modbusReadHoldingRegisters(
+    if (!modbusReadHoldingRegisters(
             MIO_MODBUS_ADDRESS,
             REG_CO2_PPM,
             1,
-            &value
-        )
-    )
+            &value))
     {
         return false;
     }
@@ -364,14 +381,11 @@ bool readMioSensors(
     data.co2Ppm =
         value * CO2_SCALE;
 
-    if (
-        !modbusReadHoldingRegisters(
+    if (!modbusReadHoldingRegisters(
             MIO_MODBUS_ADDRESS,
             REG_TEMPERATURE,
             1,
-            &value
-        )
-    )
+            &value))
     {
         return false;
     }
@@ -379,14 +393,11 @@ bool readMioSensors(
     data.temperature =
         value * TEMPERATURE_SCALE;
 
-    if (
-        !modbusReadHoldingRegisters(
+    if (!modbusReadHoldingRegisters(
             MIO_MODBUS_ADDRESS,
             REG_HUMIDITY,
             1,
-            &value
-        )
-    )
+            &value))
     {
         return false;
     }
@@ -394,14 +405,11 @@ bool readMioSensors(
     data.humidity =
         value * HUMIDITY_SCALE;
 
-    if (
-        !modbusReadHoldingRegisters(
+    if (!modbusReadHoldingRegisters(
             MIO_MODBUS_ADDRESS,
             REG_FAN_PULSES,
             1,
-            &value
-        )
-    )
+            &value))
     {
         return false;
     }
@@ -415,6 +423,10 @@ bool readMioSensors(
     return true;
 }
 
+// ============================================================
+// FAN
+// ============================================================
+
 bool setFanSpeed(
     uint8_t percentage
 )
@@ -424,13 +436,11 @@ bool setFanSpeed(
         percentage = 100;
     }
 
-    uint16_t value = percentage;
-
     bool result =
         modbusWriteRegister(
             MIO_MODBUS_ADDRESS,
             REG_FAN_SPEED,
-            value
+            percentage
         );
 
     Serial.print(
@@ -446,15 +456,17 @@ bool setFanSpeed(
     return result;
 }
 
+// ============================================================
+// CO2 VALVE
+// ============================================================
+
 void setCO2Valve(
     bool enabled
 )
 {
     digitalWrite(
         CO2_VALVE_PIN,
-        enabled
-            ? HIGH
-            : LOW
+        enabled ? HIGH : LOW
     );
 
     Serial.print(
@@ -462,11 +474,13 @@ void setCO2Valve(
     );
 
     Serial.println(
-        enabled
-            ? "ON"
-            : "OFF"
+        enabled ? "ON" : "OFF"
     );
 }
+
+// ============================================================
+// SENSOR TASK
+// ============================================================
 
 void SensorTask(
     void *parameter
@@ -474,7 +488,7 @@ void SensorTask(
 {
     (void)parameter;
 
-    SensorData localData;
+    SensorData localData{};
 
     while (true)
     {
@@ -482,8 +496,7 @@ void SensorTask(
             xSemaphoreTake(
                 rs485Mutex,
                 pdMS_TO_TICKS(300)
-            )
-            == pdTRUE
+            ) == pdTRUE
         )
         {
             bool success =
@@ -501,8 +514,7 @@ void SensorTask(
                     xSemaphoreTake(
                         sensorDataMutex,
                         pdMS_TO_TICKS(100)
-                    )
-                    == pdTRUE
+                    ) == pdTRUE
                 )
                 {
                     sharedSensorData =
@@ -529,18 +541,22 @@ void SensorTask(
     }
 }
 
+// ============================================================
+// CONTROLLER TASK
+// ============================================================
+
 void ControllerTask(
     void *parameter
 )
 {
     (void)parameter;
 
-    SensorData localData;
+    SensorData localData{};
 
     uint16_t setpoint =
         DEFAULT_SETPOINT;
 
-    SetpointMessage message;
+    SetpointMessage message{};
 
     while (true)
     {
@@ -549,33 +565,23 @@ void ControllerTask(
                 setpointQueue,
                 &message,
                 0
-            )
-            == pdTRUE
+            ) == pdTRUE
         )
         {
             uint16_t requested =
                 message.co2Setpoint;
 
-            if (
-                requested >
-                CO2_USER_MAX
-            )
+            if (requested > CO2_USER_MAX)
             {
-                requested =
-                    CO2_USER_MAX;
+                requested = CO2_USER_MAX;
             }
 
-            if (
-                requested <
-                CO2_USER_MIN
-            )
+            if (requested < CO2_USER_MIN)
             {
-                requested =
-                    CO2_USER_MIN;
+                requested = CO2_USER_MIN;
             }
 
-            setpoint =
-                requested;
+            setpoint = requested;
 
             currentSetpoint =
                 setpoint;
@@ -593,8 +599,7 @@ void ControllerTask(
             xSemaphoreTake(
                 sensorDataMutex,
                 pdMS_TO_TICKS(100)
-            )
-            == pdTRUE
+            ) == pdTRUE
         )
         {
             localData =
@@ -607,12 +612,11 @@ void ControllerTask(
 
         if (!localData.valid)
         {
+            controllerSafetyMode = true;
+
             Serial.println(
                 "Invalid sensor data!"
             );
-
-            controllerSafetyMode =
-                true;
 
             setCO2Valve(false);
 
@@ -620,13 +624,10 @@ void ControllerTask(
                 xSemaphoreTake(
                     rs485Mutex,
                     pdMS_TO_TICKS(200)
-                )
-                == pdTRUE
+                ) == pdTRUE
             )
             {
-                setFanSpeed(
-                    FAN_MAX
-                );
+                setFanSpeed(FAN_MAX);
 
                 xSemaphoreGive(
                     rs485Mutex
@@ -645,13 +646,9 @@ void ControllerTask(
         float co2 =
             localData.co2Ppm;
 
-        if (
-            co2 >=
-            CO2_SAFETY_LIMIT
-        )
+        if (co2 >= CO2_SAFETY_LIMIT)
         {
-            controllerSafetyMode =
-                true;
+            controllerSafetyMode = true;
 
             Serial.println(
                 "!!! CO2 SAFETY LIMIT !!!"
@@ -663,13 +660,10 @@ void ControllerTask(
                 xSemaphoreTake(
                     rs485Mutex,
                     pdMS_TO_TICKS(200)
-                )
-                == pdTRUE
+                ) == pdTRUE
             )
             {
-                setFanSpeed(
-                    FAN_MAX
-                );
+                setFanSpeed(FAN_MAX);
 
                 xSemaphoreGive(
                     rs485Mutex
@@ -678,30 +672,20 @@ void ControllerTask(
         }
         else
         {
-            controllerSafetyMode =
-                false;
+            controllerSafetyMode = false;
 
-            if (
-                co2 >
-                setpoint
-            )
+            if (co2 > setpoint)
             {
                 setCO2Valve(false);
-
-                uint8_t fanSpeed =
-                    FAN_HIGH;
 
                 if (
                     xSemaphoreTake(
                         rs485Mutex,
                         pdMS_TO_TICKS(200)
-                    )
-                    == pdTRUE
+                    ) == pdTRUE
                 )
                 {
-                    setFanSpeed(
-                        fanSpeed
-                    );
+                    setFanSpeed(FAN_HIGH);
 
                     xSemaphoreGive(
                         rs485Mutex
@@ -716,13 +700,10 @@ void ControllerTask(
                     xSemaphoreTake(
                         rs485Mutex,
                         pdMS_TO_TICKS(200)
-                    )
-                    == pdTRUE
+                    ) == pdTRUE
                 )
                 {
-                    setFanSpeed(
-                        FAN_LOW
-                    );
+                    setFanSpeed(FAN_LOW);
 
                     xSemaphoreGive(
                         rs485Mutex
@@ -739,6 +720,10 @@ void ControllerTask(
     }
 }
 
+// ============================================================
+// SETPOINT
+// ============================================================
+
 uint16_t loadSetpoint()
 {
     preferences.begin(
@@ -754,22 +739,14 @@ uint16_t loadSetpoint()
 
     preferences.end();
 
-    if (
-        value >
-        CO2_USER_MAX
-    )
+    if (value > CO2_USER_MAX)
     {
-        value =
-            CO2_USER_MAX;
+        value = CO2_USER_MAX;
     }
 
-    if (
-        value <
-        CO2_USER_MIN
-    )
+    if (value < CO2_USER_MIN)
     {
-        value =
-            CO2_USER_MIN;
+        value = CO2_USER_MIN;
     }
 
     return value;
@@ -779,22 +756,14 @@ void saveSetpoint(
     uint16_t setpoint
 )
 {
-    if (
-        setpoint >
-        CO2_USER_MAX
-    )
+    if (setpoint > CO2_USER_MAX)
     {
-        setpoint =
-            CO2_USER_MAX;
+        setpoint = CO2_USER_MAX;
     }
 
-    if (
-        setpoint <
-        CO2_USER_MIN
-    )
+    if (setpoint < CO2_USER_MIN)
     {
-        setpoint =
-            CO2_USER_MIN;
+        setpoint = CO2_USER_MIN;
     }
 
     preferences.begin(
@@ -834,6 +803,10 @@ void sendSetpointToController(
     );
 }
 
+// ============================================================
+// ENCODER
+// ============================================================
+
 void IRAM_ATTR encoderISR()
 {
     BaseType_t higherPriorityTaskWoken =
@@ -868,13 +841,15 @@ void IRAM_ATTR encoderISR()
         &higherPriorityTaskWoken
     );
 
-    if (
-        higherPriorityTaskWoken
-    )
+    if (higherPriorityTaskWoken)
     {
         portYIELD_FROM_ISR();
     }
 }
+
+// ============================================================
+// BUTTON
+// ============================================================
 
 void IRAM_ATTR buttonISR()
 {
@@ -892,13 +867,15 @@ void IRAM_ATTR buttonISR()
         &higherPriorityTaskWoken
     );
 
-    if (
-        higherPriorityTaskWoken
-    )
+    if (higherPriorityTaskWoken)
     {
         portYIELD_FROM_ISR();
     }
 }
+
+// ============================================================
+// DISPLAY
+// ============================================================
 
 void updateDisplay(
     const SensorData &data,
@@ -919,76 +896,37 @@ void updateDisplay(
         0
     );
 
-    display.print(
-        "CO2: "
-    );
+    display.print("CO2: ");
+    display.print(data.co2Ppm, 0);
+    display.println(" ppm");
 
-    display.print(
-        data.co2Ppm,
-        0
-    );
+    display.print("Limit: ");
+    display.print(setpoint);
+    display.println(" ppm");
 
-    display.println(
-        " ppm"
-    );
+    display.print("Temp: ");
+    display.print(data.temperature, 1);
+    display.println(" C");
 
-    display.print(
-        "Limit: "
-    );
+    display.print("Hum: ");
+    display.print(data.humidity, 1);
+    display.println(" %");
 
-    display.print(
-        setpoint
-    );
-
-    display.println(
-        " ppm"
-    );
-
-    display.print(
-        "Temp: "
-    );
-
-    display.print(
-        data.temperature,
-        1
-    );
-
-    display.println(
-        " C"
-    );
-
-    display.print(
-        "Hum: "
-    );
-
-    display.print(
-        data.humidity,
-        1
-    );
-
-    display.println(
-        " %"
-    );
-
-    display.print(
-        "Pulses: "
-    );
-
-    display.println(
-        data.fanPulses
-    );
+    display.print("Pulses: ");
+    display.println(data.fanPulses);
 
     if (safetyMode)
     {
         display.println();
-
-        display.println(
-            "!!! SAFETY !!!"
-        );
+        display.println("!!! SAFETY !!!");
     }
 
     display.display();
 }
+
+// ============================================================
+// UI TASK
+// ============================================================
 
 void UITask(
     void *parameter
@@ -1006,7 +944,7 @@ void UITask(
         setpoint
     );
 
-    SensorData localData;
+    SensorData localData{};
 
     UIEvent event;
 
@@ -1022,8 +960,7 @@ void UITask(
                 pdMS_TO_TICKS(
                     UI_PERIOD_MS
                 )
-            )
-            == pdTRUE
+            ) == pdTRUE
         )
         {
             if (
@@ -1031,30 +968,15 @@ void UITask(
                 UIEventType::ENCODER_CW
             )
             {
-                if (
-                    setpoint <
-                    CO2_USER_MAX
-                )
+                if (setpoint < CO2_USER_MAX)
                 {
                     setpoint += 50;
                 }
 
-                if (
-                    setpoint >
-                    CO2_USER_MAX
-                )
+                if (setpoint > CO2_USER_MAX)
                 {
-                    setpoint =
-                        CO2_USER_MAX;
+                    setpoint = CO2_USER_MAX;
                 }
-
-                Serial.print(
-                    "UI setpoint: "
-                );
-
-                Serial.println(
-                    setpoint
-                );
             }
 
             else if (
@@ -1062,30 +984,15 @@ void UITask(
                 UIEventType::ENCODER_CCW
             )
             {
-                if (
-                    setpoint >
-                    CO2_USER_MIN
-                )
+                if (setpoint > CO2_USER_MIN)
                 {
                     setpoint -= 50;
                 }
 
-                if (
-                    setpoint <
-                    CO2_USER_MIN
-                )
+                if (setpoint < CO2_USER_MIN)
                 {
-                    setpoint =
-                        CO2_USER_MIN;
+                    setpoint = CO2_USER_MIN;
                 }
-
-                Serial.print(
-                    "UI setpoint: "
-                );
-
-                Serial.println(
-                    setpoint
-                );
             }
 
             else if (
@@ -1097,18 +1004,12 @@ void UITask(
                     millis();
 
                 if (
-                    now -
-                    lastButtonTime
-                    >
+                    now - lastButtonTime >
                     300
                 )
                 {
                     lastButtonTime =
                         now;
-
-                    Serial.println(
-                        "UI button pressed"
-                    );
 
                     saveSetpoint(
                         setpoint
@@ -1125,8 +1026,7 @@ void UITask(
             xSemaphoreTake(
                 sensorDataMutex,
                 pdMS_TO_TICKS(50)
-            )
-            == pdTRUE
+            ) == pdTRUE
         )
         {
             localData =
@@ -1145,7 +1045,11 @@ void UITask(
     }
 }
 
-static bool connectWiFi()
+// ============================================================
+// WIFI
+// ============================================================
+
+bool connectWiFi()
 {
     if (
         WiFi.status() ==
@@ -1168,15 +1072,11 @@ static bool connectWiFi()
         millis();
 
     while (
-        WiFi.status() !=
-        WL_CONNECTED
-        &&
+        WiFi.status() != WL_CONNECTED &&
         millis() - start < 10000
     )
     {
-        Serial.print(
-            "."
-        );
+        Serial.print(".");
 
         vTaskDelay(
             pdMS_TO_TICKS(500)
@@ -1208,13 +1108,17 @@ static bool connectWiFi()
     return false;
 }
 
+// ============================================================
+// NETWORK TASK
+// ============================================================
+
 void NetworkTask(
     void *parameter
 )
 {
     (void)parameter;
 
-    SensorData localData;
+    SensorData localData{};
 
     connectWiFi();
 
@@ -1232,8 +1136,7 @@ void NetworkTask(
             xSemaphoreTake(
                 sensorDataMutex,
                 pdMS_TO_TICKS(100)
-            )
-            == pdTRUE
+            ) == pdTRUE
         )
         {
             localData =
@@ -1296,8 +1199,7 @@ void NetworkTask(
                 );
 
             String fullURL =
-                url +
-                parameters;
+                url + parameters;
 
             http.begin(
                 fullURL
@@ -1320,14 +1222,15 @@ void NetworkTask(
 
             String readURL =
                 "https://api.thingspeak.com/channels/" +
-                String(THINGSPEAK_CHANNEL_ID) +
+                String(
+                    THINGSPEAK_CHANNEL_ID
+                ) +
                 "/fields/5/last.txt";
 
             if (
                 strlen(
                     THINGSPEAK_READ_API_KEY
-                )
-                > 0
+                ) > 0
             )
             {
                 readURL +=
@@ -1344,27 +1247,21 @@ void NetworkTask(
             int readCode =
                 readHttp.GET();
 
-            if (
-                readCode == 200
-            )
+            if (readCode == 200)
             {
                 String response =
                     readHttp.getString();
 
                 response.trim();
 
-                if (
-                    response.length()
-                    > 0
-                )
+                if (response.length() > 0)
                 {
                     int cloudSetpoint =
                         response.toInt();
 
                     if (
                         cloudSetpoint >=
-                        CO2_USER_MIN
-                        &&
+                        CO2_USER_MIN &&
                         cloudSetpoint <=
                         CO2_USER_MAX
                     )
@@ -1386,12 +1283,6 @@ void NetworkTask(
 
                         Serial.println(
                             cloudSetpoint
-                        );
-                    }
-                    else
-                    {
-                        Serial.println(
-                            "Cloud setpoint rejected"
                         );
                     }
                 }
