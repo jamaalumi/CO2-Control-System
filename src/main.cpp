@@ -1,7 +1,4 @@
 #include <Arduino.h>
-#include <Wire.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
 
 #include "config.h"
 #include "app.h"
@@ -22,57 +19,8 @@ void setup()
 
     Serial.println();
     Serial.println("================================");
-    Serial.println("CO2 CONTROL SYSTEM");
-    Serial.println("Starting...");
+    Serial.println(" Greenhouse CO2 Controller");
     Serial.println("================================");
-
-    // --------------------------------------------------------
-    // CO2 VALVE
-    // --------------------------------------------------------
-
-    pinMode(CO2_VALVE_PIN, OUTPUT);
-
-    digitalWrite(
-        CO2_VALVE_PIN,
-        LOW
-    );
-
-    // --------------------------------------------------------
-    // ENCODER
-    // --------------------------------------------------------
-
-    pinMode(
-        ENCODER_A_PIN,
-        INPUT_PULLUP
-    );
-
-    pinMode(
-        ENCODER_B_PIN,
-        INPUT_PULLUP
-    );
-
-    // --------------------------------------------------------
-    // BUTTON
-    // --------------------------------------------------------
-
-    pinMode(
-        BUTTON_PIN,
-        INPUT_PULLUP
-    );
-
-    // --------------------------------------------------------
-    // RS485 DIRECTION
-    // --------------------------------------------------------
-
-    pinMode(
-        RS485_DE_RE_PIN,
-        OUTPUT
-    );
-
-    digitalWrite(
-        RS485_DE_RE_PIN,
-        LOW
-    );
 
     // --------------------------------------------------------
     // RS485
@@ -85,12 +33,17 @@ void setup()
         RS485_TX_PIN
     );
 
-    Serial.println(
-        "RS485 initialized."
+    pinMode(RS485_DE_RE_PIN, OUTPUT);
+
+    digitalWrite(
+        RS485_DE_RE_PIN,
+        LOW
     );
 
+    Serial.println("RS485 initialized.");
+
     // --------------------------------------------------------
-    // I2C
+    // OLED
     // --------------------------------------------------------
 
     Wire.begin(
@@ -98,200 +51,108 @@ void setup()
         OLED_SCL_PIN
     );
 
-    Serial.println(
-        "I2C initialized."
-    );
-
-    // --------------------------------------------------------
-    // OLED
-    // --------------------------------------------------------
-
     if (!display.begin(
             SSD1306_SWITCHCAPVCC,
             OLED_ADDRESS))
     {
-        Serial.println(
-            "OLED initialization failed!"
-        );
+        Serial.println("OLED initialization failed.");
     }
     else
     {
         display.clearDisplay();
 
         display.setTextSize(1);
+        display.setTextColor(SSD1306_WHITE);
 
-        display.setTextColor(
-            SSD1306_WHITE
-        );
+        display.setCursor(0, 0);
+        display.println("CO2 Controller");
 
-        display.setCursor(
-            0,
-            0
-        );
-
-        display.println(
-            "CO2 Controller"
-        );
-
-        display.println();
-
-        display.println(
-            "Starting..."
-        );
+        display.setCursor(0, 16);
+        display.println("Starting...");
 
         display.display();
-
-        Serial.println(
-            "OLED initialized."
-        );
     }
 
     // --------------------------------------------------------
-    // MUTEXES
+    // CO2 VALVE
     // --------------------------------------------------------
 
-    sensorDataMutex =
-        xSemaphoreCreateMutex();
+    pinMode(
+        CO2_VALVE_PIN,
+        OUTPUT
+    );
 
-    rs485Mutex =
-        xSemaphoreCreateMutex();
-
-    if (
-        sensorDataMutex == nullptr ||
-        rs485Mutex == nullptr
-    )
-    {
-        Serial.println(
-            "ERROR: Mutex creation failed!"
-        );
-
-        while (true)
-        {
-            delay(1000);
-        }
-    }
+    // Valve must always start OFF.
+    setCO2Valve(false);
 
     // --------------------------------------------------------
-    // QUEUES
+    // ROTARY ENCODER
     // --------------------------------------------------------
 
-    uiEventQueue =
-        xQueueCreate(
-            UI_QUEUE_LENGTH,
-            sizeof(UIEvent)
-        );
+    pinMode(
+        ENCODER_A_PIN,
+        INPUT_PULLUP
+    );
 
-    setpointQueue =
-        xQueueCreate(
-            SETPOINT_QUEUE_LENGTH,
-            sizeof(SetpointMessage)
-        );
+    pinMode(
+        ENCODER_B_PIN,
+        INPUT_PULLUP
+    );
 
-    if (
-        uiEventQueue == nullptr ||
-        setpointQueue == nullptr
-    )
-    {
-        Serial.println(
-            "ERROR: Queue creation failed!"
-        );
-
-        while (true)
-        {
-            delay(1000);
-        }
-    }
-
-    // --------------------------------------------------------
-    // INTERRUPTS
-    // --------------------------------------------------------
+    pinMode(
+        BUTTON_PIN,
+        INPUT_PULLUP
+    );
 
     attachInterrupt(
-        digitalPinToInterrupt(
-            ENCODER_A_PIN
-        ),
+        digitalPinToInterrupt(ENCODER_A_PIN),
         encoderISR,
         CHANGE
     );
 
     attachInterrupt(
-        digitalPinToInterrupt(
-            BUTTON_PIN
-        ),
+        digitalPinToInterrupt(BUTTON_PIN),
         buttonISR,
         FALLING
     );
 
     // --------------------------------------------------------
-    // SENSOR TASK
+    // LOAD SAVED SETPOINT
     // --------------------------------------------------------
 
-    BaseType_t sensorTaskResult =
-        xTaskCreate(
-            SensorTask,
-            "Sensor Task",
-            4096,
-            nullptr,
-            2,
-            nullptr
-        );
+    uint16_t setpoint = loadSetpoint();
+
+    Serial.print("CO2 setpoint: ");
+    Serial.print(setpoint);
+    Serial.println(" ppm");
+
+    // Send initial setpoint to controller queue.
+    sendSetpointToController(setpoint);
 
     // --------------------------------------------------------
-    // CONTROLLER TASK
+    // CREATE FREE RTOS OBJECTS
     // --------------------------------------------------------
 
-    BaseType_t controllerTaskResult =
-        xTaskCreate(
-            ControllerTask,
-            "Controller Task",
-            4096,
-            nullptr,
-            3,
-            nullptr
-        );
+    sensorDataMutex = xSemaphoreCreateMutex();
 
-    // --------------------------------------------------------
-    // UI TASK
-    // --------------------------------------------------------
+    rs485Mutex = xSemaphoreCreateMutex();
 
-    BaseType_t uiTaskResult =
-        xTaskCreate(
-            UITask,
-            "UI Task",
-            4096,
-            nullptr,
-            1,
-            nullptr
-        );
+    uiEventQueue = xQueueCreate(
+        UI_QUEUE_LENGTH,
+        sizeof(UIEvent)
+    );
 
-    // --------------------------------------------------------
-    // NETWORK TASK
-    // --------------------------------------------------------
+    setpointQueue = xQueueCreate(
+        SETPOINT_QUEUE_LENGTH,
+        sizeof(SetpointMessage)
+    );
 
-    BaseType_t networkTaskResult =
-        xTaskCreate(
-            NetworkTask,
-            "Network Task",
-            8192,
-            nullptr,
-            1,
-            nullptr
-        );
-
-    // --------------------------------------------------------
-    // CHECK TASK CREATION
-    // --------------------------------------------------------
-
-    if (
-        sensorTaskResult != pdPASS ||
-        controllerTaskResult != pdPASS ||
-        uiTaskResult != pdPASS ||
-        networkTaskResult != pdPASS
-    )
+    if (sensorDataMutex == nullptr ||
+        rs485Mutex == nullptr ||
+        uiEventQueue == nullptr ||
+        setpointQueue == nullptr)
     {
-        Serial.println(
-            "ERROR: One or more tasks failed!"
-        );
+        Serial.println("ERROR: FreeRTOS object creation failed.");
 
         while (true)
         {
@@ -299,18 +160,93 @@ void setup()
         }
     }
 
-    Serial.println();
-    Serial.println(
-        "All FreeRTOS tasks started."
+    // --------------------------------------------------------
+    // INITIAL SHARED SENSOR DATA
+    // --------------------------------------------------------
+
+    sharedSensorData.co2Ppm = 0.0f;
+    sharedSensorData.temperature = 0.0f;
+    sharedSensorData.humidity = 0.0f;
+    sharedSensorData.pressurePa = 0.0f;
+
+    sharedSensorData.fanPulses = 0;
+    sharedSensorData.fanSpeed = 0;
+
+    sharedSensorData.timestamp = millis();
+
+    sharedSensorData.valid = false;
+
+    // --------------------------------------------------------
+    // CREATE TASKS
+    // --------------------------------------------------------
+
+    BaseType_t result;
+
+    result = xTaskCreate(
+        SensorTask,
+        "SensorTask",
+        4096,
+        nullptr,
+        2,
+        nullptr
     );
 
-    Serial.println(
-        "CO2 controller ready."
+    if (result != pdPASS)
+    {
+        Serial.println("ERROR: SensorTask creation failed.");
+    }
+
+    result = xTaskCreate(
+        ControllerTask,
+        "ControllerTask",
+        4096,
+        nullptr,
+        3,
+        nullptr
     );
 
-    Serial.println(
-        "================================"
+    if (result != pdPASS)
+    {
+        Serial.println("ERROR: ControllerTask creation failed.");
+    }
+
+    result = xTaskCreate(
+        UITask,
+        "UITask",
+        4096,
+        nullptr,
+        1,
+        nullptr
     );
+
+    if (result != pdPASS)
+    {
+        Serial.println("ERROR: UITask creation failed.");
+    }
+
+    result = xTaskCreate(
+        NetworkTask,
+        "NetworkTask",
+        6144,
+        nullptr,
+        1,
+        nullptr
+    );
+
+    if (result != pdPASS)
+    {
+        Serial.println("ERROR: NetworkTask creation failed.");
+    }
+
+    Serial.println("All tasks started.");
+
+    // --------------------------------------------------------
+    // START FAN OFF
+    // --------------------------------------------------------
+
+    setFanSpeed(FAN_OFF);
+
+    Serial.println("System initialized.");
 }
 
 // ============================================================
@@ -319,6 +255,7 @@ void setup()
 
 void loop()
 {
+    // All application work is handled by FreeRTOS tasks.
     vTaskDelay(
         pdMS_TO_TICKS(1000)
     );

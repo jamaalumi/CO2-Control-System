@@ -11,7 +11,6 @@
 // ============================================================
 
 extern HardwareSerial RS485;
-
 extern Adafruit_SSD1306 display;
 
 // ============================================================
@@ -23,6 +22,7 @@ struct SensorData
     float co2Ppm;
     float temperature;
     float humidity;
+    float pressurePa;
 
     uint16_t fanPulses;
     uint16_t fanSpeed;
@@ -59,7 +59,7 @@ struct SetpointMessage
 };
 
 // ============================================================
-// FREERTOS OBJECTS
+// GLOBAL FREERTOS OBJECTS
 // ============================================================
 
 extern SemaphoreHandle_t sensorDataMutex;
@@ -68,10 +68,14 @@ extern SemaphoreHandle_t rs485Mutex;
 extern QueueHandle_t uiEventQueue;
 extern QueueHandle_t setpointQueue;
 
+// ============================================================
+// SHARED SENSOR DATA
+// ============================================================
+
 extern SensorData sharedSensorData;
 
 // ============================================================
-// TASKS
+// FREERTOS TASKS
 // ============================================================
 
 void SensorTask(void *parameter);
@@ -83,15 +87,19 @@ void UITask(void *parameter);
 void NetworkTask(void *parameter);
 
 // ============================================================
-// RS485 / FAN / VALVE
+// FAN CONTROL
 // ============================================================
 
 bool setFanSpeed(uint8_t speed);
 
+// ============================================================
+// CO2 VALVE CONTROL
+// ============================================================
+
 void setCO2Valve(bool enabled);
 
 // ============================================================
-// SETPOINT
+// SETPOINT STORAGE
 // ============================================================
 
 uint16_t loadSetpoint();
@@ -125,3 +133,4 @@ void updateDisplay(
 bool connectWiFi();
 
 #endif
+
