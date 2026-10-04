@@ -2,6 +2,21 @@
 #define APP_H
 
 #include <Arduino.h>
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+// ============================================================
+// GLOBAL HARDWARE OBJECTS
+// ============================================================
+
+extern HardwareSerial RS485;
+
+extern Adafruit_SSD1306 display;
+
+// ============================================================
+// SENSOR DATA
+// ============================================================
 
 struct SensorData
 {
@@ -9,15 +24,21 @@ struct SensorData
     float temperature;
     float humidity;
 
-    uint32_t fanPulses;
+    uint16_t fanPulses;
+    uint16_t fanSpeed;
 
-    uint32_t timestamp;
+    unsigned long timestamp;
 
     bool valid;
 };
 
+// ============================================================
+// UI EVENTS
+// ============================================================
+
 enum class UIEventType
 {
+    NONE = 0,
     ENCODER_CW,
     ENCODER_CCW,
     BUTTON_PRESS
@@ -28,17 +49,30 @@ struct UIEvent
     UIEventType type;
 };
 
+// ============================================================
+// SETPOINT MESSAGE
+// ============================================================
+
 struct SetpointMessage
 {
     uint16_t co2Setpoint;
 };
 
+// ============================================================
+// FREERTOS OBJECTS
+// ============================================================
+
 extern SemaphoreHandle_t sensorDataMutex;
 extern SemaphoreHandle_t rs485Mutex;
+
 extern QueueHandle_t uiEventQueue;
 extern QueueHandle_t setpointQueue;
 
 extern SensorData sharedSensorData;
+
+// ============================================================
+// TASKS
+// ============================================================
 
 void SensorTask(void *parameter);
 
@@ -48,49 +82,46 @@ void UITask(void *parameter);
 
 void NetworkTask(void *parameter);
 
-void IRAM_ATTR encoderISR();
+// ============================================================
+// RS485 / FAN / VALVE
+// ============================================================
 
-void IRAM_ATTR buttonISR();
+bool setFanSpeed(uint8_t speed);
 
-bool modbusReadHoldingRegisters(
-    uint8_t slaveAddress,
-    uint16_t startRegister,
-    uint16_t quantity,
-    uint16_t *buffer
-);
+void setCO2Valve(bool enabled);
 
-bool modbusWriteRegister(
-    uint8_t slaveAddress,
-    uint16_t registerAddress,
-    uint16_t value
-);
-
-bool readMioSensors(
-    SensorData &data
-);
-
-bool setFanSpeed(
-    uint8_t percentage
-);
-
-void setCO2Valve(
-    bool enabled
-);
+// ============================================================
+// SETPOINT
+// ============================================================
 
 uint16_t loadSetpoint();
 
-void saveSetpoint(
-    uint16_t setpoint
-);
+void saveSetpoint(uint16_t value);
 
-void sendSetpointToController(
-    uint16_t setpoint
-);
+void sendSetpointToController(uint16_t setpoint);
+
+// ============================================================
+// INTERRUPTS
+// ============================================================
+
+void encoderISR();
+
+void buttonISR();
+
+// ============================================================
+// DISPLAY
+// ============================================================
 
 void updateDisplay(
-    const SensorData &data,
+    const SensorData& data,
     uint16_t setpoint,
     bool safetyMode
 );
+
+// ============================================================
+// WIFI
+// ============================================================
+
+bool connectWiFi();
 
 #endif
