@@ -1,262 +1,166 @@
-#include <Arduino.h>
 
-#include "config.h"
-#include "app.h"
+#include <iostream>
+
+#include "FreeRTOS.h"
+#include "task.h"
+#include "semphr.h"
+
+#include "pico/stdlib.h"
+#include "hardware/gpio.h"
+#include "hardware/timer.h"
+
 
 // ============================================================
-// SETUP
+// Runtime counter required by FreeRTOS/Pico
 // ============================================================
 
-void setup()
+extern "C"
 {
-    // --------------------------------------------------------
-    // Serial
-    // --------------------------------------------------------
-
-    Serial.begin(115200);
-
-    delay(1000);
-
-    Serial.println();
-    Serial.println("================================");
-    Serial.println(" Greenhouse CO2 Controller");
-    Serial.println("================================");
-
-    // --------------------------------------------------------
-    // RS485
-    // --------------------------------------------------------
-
-    RS485.begin(
-        RS485_BAUDRATE,
-        SERIAL_8N1,
-        RS485_RX_PIN,
-        RS485_TX_PIN
-    );
-
-    pinMode(RS485_DE_RE_PIN, OUTPUT);
-
-    digitalWrite(
-        RS485_DE_RE_PIN,
-        LOW
-    );
-
-    Serial.println("RS485 initialized.");
-
-    // --------------------------------------------------------
-    // OLED
-    // --------------------------------------------------------
-
-    Wire.begin(
-        OLED_SDA_PIN,
-        OLED_SCL_PIN
-    );
-
-    if (!display.begin(
-            SSD1306_SWITCHCAPVCC,
-            OLED_ADDRESS))
+    uint32_t read_runtime_ctr(void)
     {
-        Serial.println("OLED initialization failed.");
+        return timer_hw->timerawl;
     }
-    else
+}
+
+
+// ============================================================
+// FreeRTOS test task
+// ============================================================
+
+void led_task(void *param)
+{
+    (void)param;
+
+    const uint LED_PIN = 25;
+
+    gpio_init(LED_PIN);
+    gpio_set_dir(LED_PIN, GPIO_OUT);
+
+    while (true)
     {
-        display.clearDisplay();
+        gpio_put(LED_PIN, 1);
 
-        display.setTextSize(1);
-        display.setTextColor(SSD1306_WHITE);
+        vTaskDelay(
+            pdMS_TO_TICKS(500)
+        );
 
-        display.setCursor(0, 0);
-        display.println("CO2 Controller");
+        gpio_put(LED_PIN, 0);
 
-        display.setCursor(0, 16);
-        display.println("Starting...");
-
-        display.display();
+        vTaskDelay(
+            pdMS_TO_TICKS(500)
+        );
     }
+}
 
-    // --------------------------------------------------------
-    // CO2 VALVE
-    // --------------------------------------------------------
 
-    pinMode(
-        CO2_VALVE_PIN,
-        OUTPUT
-    );
+// ============================================================
+// Serial test task
+// ============================================================
 
-    // Valve must always start OFF.
-    setCO2Valve(false);
+void serial_task(void *param)
+{
+    (void)param;
 
-    // --------------------------------------------------------
-    // ROTARY ENCODER
-    // --------------------------------------------------------
-
-    pinMode(
-        ENCODER_A_PIN,
-        INPUT_PULLUP
-    );
-
-    pinMode(
-        ENCODER_B_PIN,
-        INPUT_PULLUP
-    );
-
-    pinMode(
-        BUTTON_PIN,
-        INPUT_PULLUP
-    );
-
-    attachInterrupt(
-        digitalPinToInterrupt(ENCODER_A_PIN),
-        encoderISR,
-        CHANGE
-    );
-
-    attachInterrupt(
-        digitalPinToInterrupt(BUTTON_PIN),
-        buttonISR,
-        FALLING
-    );
-
-    // --------------------------------------------------------
-    // LOAD SAVED SETPOINT
-    // --------------------------------------------------------
-
-    uint16_t setpoint = loadSetpoint();
-
-    Serial.print("CO2 setpoint: ");
-    Serial.print(setpoint);
-    Serial.println(" ppm");
-
-    // Send initial setpoint to controller queue.
-    sendSetpointToController(setpoint);
-
-    // --------------------------------------------------------
-    // CREATE FREE RTOS OBJECTS
-    // --------------------------------------------------------
-
-    sensorDataMutex = xSemaphoreCreateMutex();
-
-    rs485Mutex = xSemaphoreCreateMutex();
-
-    uiEventQueue = xQueueCreate(
-        UI_QUEUE_LENGTH,
-        sizeof(UIEvent)
-    );
-
-    setpointQueue = xQueueCreate(
-        SETPOINT_QUEUE_LENGTH,
-        sizeof(SetpointMessage)
-    );
-
-    if (sensorDataMutex == nullptr ||
-        rs485Mutex == nullptr ||
-        uiEventQueue == nullptr ||
-        setpointQueue == nullptr)
+    while (true)
     {
-        Serial.println("ERROR: FreeRTOS object creation failed.");
+        std::cout
+            << "FreeRTOS task running..."
+            << std::endl;
 
-        while (true)
-        {
-            delay(1000);
-        }
+        vTaskDelay(
+            pdMS_TO_TICKS(1000)
+        );
     }
+}
 
-    // --------------------------------------------------------
-    // INITIAL SHARED SENSOR DATA
-    // --------------------------------------------------------
 
-    sharedSensorData.co2Ppm = 0.0f;
-    sharedSensorData.temperature = 0.0f;
-    sharedSensorData.humidity = 0.0f;
-    sharedSensorData.pressurePa = 0.0f;
+// ============================================================
+// Main
+// ============================================================
 
-    sharedSensorData.fanPulses = 0;
-    sharedSensorData.fanSpeed = 0;
+int main()
+{
+    stdio_init_all();
 
-    sharedSensorData.timestamp = millis();
+    sleep_ms(2000);
 
-    sharedSensorData.valid = false;
+    std::cout
+        << "================================"
+        << std::endl;
 
-    // --------------------------------------------------------
-    // CREATE TASKS
-    // --------------------------------------------------------
+    std::cout
+        << " Raspberry Pi Pico FreeRTOS"
+        << std::endl;
+
+    std::cout
+        << " Test starting..."
+        << std::endl;
+
+    std::cout
+        << "================================"
+        << std::endl;
+
 
     BaseType_t result;
 
-    result = xTaskCreate(
-        SensorTask,
-        "SensorTask",
-        4096,
-        nullptr,
-        2,
-        nullptr
-    );
-
-    if (result != pdPASS)
-    {
-        Serial.println("ERROR: SensorTask creation failed.");
-    }
-
-    result = xTaskCreate(
-        ControllerTask,
-        "ControllerTask",
-        4096,
-        nullptr,
-        3,
-        nullptr
-    );
-
-    if (result != pdPASS)
-    {
-        Serial.println("ERROR: ControllerTask creation failed.");
-    }
-
-    result = xTaskCreate(
-        UITask,
-        "UITask",
-        4096,
-        nullptr,
-        1,
-        nullptr
-    );
-
-    if (result != pdPASS)
-    {
-        Serial.println("ERROR: UITask creation failed.");
-    }
-
-    result = xTaskCreate(
-        NetworkTask,
-        "NetworkTask",
-        6144,
-        nullptr,
-        1,
-        nullptr
-    );
-
-    if (result != pdPASS)
-    {
-        Serial.println("ERROR: NetworkTask creation failed.");
-    }
-
-    Serial.println("All tasks started.");
 
     // --------------------------------------------------------
-    // START FAN OFF
+    // Create LED task
     // --------------------------------------------------------
 
-    setFanSpeed(FAN_OFF);
-
-    Serial.println("System initialized.");
-}
-
-// ============================================================
-// LOOP
-// ============================================================
-
-void loop()
-{
-    // All application work is handled by FreeRTOS tasks.
-    vTaskDelay(
-        pdMS_TO_TICKS(1000)
+    result = xTaskCreate(
+        led_task,
+        "LED",
+        256,
+        nullptr,
+        tskIDLE_PRIORITY + 1,
+        nullptr
     );
+
+    if (result != pdPASS)
+    {
+        std::cout
+            << "ERROR: LED task creation failed!"
+            << std::endl;
+    }
+
+
+    // --------------------------------------------------------
+    // Create serial task
+    // --------------------------------------------------------
+
+    result = xTaskCreate(
+        serial_task,
+        "SERIAL",
+        256,
+        nullptr,
+        tskIDLE_PRIORITY + 1,
+        nullptr
+    );
+
+    if (result != pdPASS)
+    {
+        std::cout
+            << "ERROR: Serial task creation failed!"
+            << std::endl;
+    }
+
+
+    // --------------------------------------------------------
+    // Start FreeRTOS
+    // --------------------------------------------------------
+
+    std::cout
+        << "Starting FreeRTOS scheduler..."
+        << std::endl;
+
+
+    vTaskStartScheduler();
+
+
+    // Scheduler should never return
+    while (true)
+    {
+    }
 }
+
