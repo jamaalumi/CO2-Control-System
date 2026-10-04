@@ -1,67 +1,67 @@
 #include <Arduino.h>
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
 
 #include "config.h"
 #include "app.h"
 
+// RS485 on ESP32 UART2
+HardwareSerial RS485(2);
+
+// OLED
+Adafruit_SSD1306 display(
+    128,
+    64,
+    &Wire,
+    -1
+);
+
+
+// ============================================================
+// SETUP
+// ============================================================
+
 void setup()
 {
-    Serial.begin(
-        115200
-    );
+    // --------------------------------------------------------
+    // Serial
+    // --------------------------------------------------------
+
+    Serial.begin(115200);
 
     delay(1000);
 
     Serial.println();
-    Serial.println(
-        "================================"
-    );
+    Serial.println("================================");
+    Serial.println("CO2 CONTROL SYSTEM");
+    Serial.println("Starting...");
+    Serial.println("================================");
 
-    Serial.println(
-        "CO2 CONTROL SYSTEM"
-    );
 
-    Serial.println(
-        "Starting..."
-    );
+    // --------------------------------------------------------
+    // CO2 valve
+    // --------------------------------------------------------
 
-    Serial.println(
-        "================================"
-    );
+    pinMode(CO2_VALVE_PIN, OUTPUT);
+    digitalWrite(CO2_VALVE_PIN, LOW);
 
-    pinMode(
-        CO2_VALVE_PIN,
-        OUTPUT
-    );
 
-    digitalWrite(
-        CO2_VALVE_PIN,
-        LOW
-    );
+    // --------------------------------------------------------
+    // Encoder + button
+    // --------------------------------------------------------
 
-    pinMode(
-        ENCODER_A_PIN,
-        INPUT_PULLUP
-    );
+    pinMode(ENCODER_A_PIN, INPUT_PULLUP);
+    pinMode(ENCODER_B_PIN, INPUT_PULLUP);
+    pinMode(BUTTON_PIN, INPUT_PULLUP);
 
-    pinMode(
-        ENCODER_B_PIN,
-        INPUT_PULLUP
-    );
 
-    pinMode(
-        BUTTON_PIN,
-        INPUT_PULLUP
-    );
+    // --------------------------------------------------------
+    // RS485
+    // --------------------------------------------------------
 
-    pinMode(
-        RS485_DE_RE_PIN,
-        OUTPUT
-    );
-
-    digitalWrite(
-        RS485_DE_RE_PIN,
-        LOW
-    );
+    pinMode(RS485_DE_RE_PIN, OUTPUT);
+    digitalWrite(RS485_DE_RE_PIN, LOW);
 
     RS485.begin(
         RS485_BAUDRATE,
@@ -70,65 +70,49 @@ void setup()
         RS485_TX_PIN
     );
 
+
+    // --------------------------------------------------------
+    // I2C / OLED
+    // --------------------------------------------------------
+
     Wire.begin(
         OLED_SDA_PIN,
         OLED_SCL_PIN
     );
 
-    if (
-        !display.begin(
+    if (!display.begin(
             SSD1306_SWITCHCAPVCC,
-            OLED_ADDRESS
-        )
-    )
+            OLED_ADDRESS))
     {
-        Serial.println(
-            "OLED initialization failed!"
-        );
+        Serial.println("OLED initialization failed!");
     }
     else
     {
         display.clearDisplay();
 
         display.setTextSize(1);
+        display.setTextColor(SSD1306_WHITE);
 
-        display.setTextColor(
-            SSD1306_WHITE
-        );
-
-        display.setCursor(
-            0,
-            0
-        );
-
-        display.println(
-            "CO2 Controller"
-        );
-
+        display.setCursor(0, 0);
+        display.println("CO2 Controller");
         display.println();
-
-        display.println(
-            "Starting..."
-        );
+        display.println("Starting...");
 
         display.display();
     }
 
-    sensorDataMutex =
-        xSemaphoreCreateMutex();
 
-    rs485Mutex =
-        xSemaphoreCreateMutex();
+    // --------------------------------------------------------
+    // Mutexes
+    // --------------------------------------------------------
 
-    if (
-        sensorDataMutex == nullptr
-        ||
-        rs485Mutex == nullptr
-    )
+    sensorDataMutex = xSemaphoreCreateMutex();
+    rs485Mutex = xSemaphoreCreateMutex();
+
+    if (sensorDataMutex == nullptr ||
+        rs485Mutex == nullptr)
     {
-        Serial.println(
-            "ERROR: Mutex creation failed"
-        );
+        Serial.println("ERROR: Mutex creation failed");
 
         while (true)
         {
@@ -136,49 +120,53 @@ void setup()
         }
     }
 
-    uiEventQueue =
-        xQueueCreate(
-            UI_QUEUE_LENGTH,
-            sizeof(UIEvent)
-        );
 
-    setpointQueue =
-        xQueueCreate(
-            SETPOINT_QUEUE_LENGTH,
-            sizeof(SetpointMessage)
-        );
+    // --------------------------------------------------------
+    // Queues
+    // --------------------------------------------------------
 
-    if (
-        uiEventQueue == nullptr
-        ||
-        setpointQueue == nullptr
-    )
+    uiEventQueue = xQueueCreate(
+        UI_QUEUE_LENGTH,
+        sizeof(UIEvent)
+    );
+
+    setpointQueue = xQueueCreate(
+        SETPOINT_QUEUE_LENGTH,
+        sizeof(SetpointMessage)
+    );
+
+    if (uiEventQueue == nullptr ||
+        setpointQueue == nullptr)
     {
-        Serial.println(
-            "ERROR: Queue creation failed"
-        );
+        Serial.println("ERROR: Queue creation failed");
 
         while (true)
         {
             delay(1000);
         }
     }
+
+
+    // --------------------------------------------------------
+    // Interrupts
+    // --------------------------------------------------------
 
     attachInterrupt(
-        digitalPinToInterrupt(
-            ENCODER_A_PIN
-        ),
+        digitalPinToInterrupt(ENCODER_A_PIN),
         encoderISR,
         CHANGE
     );
 
     attachInterrupt(
-        digitalPinToInterrupt(
-            BUTTON_PIN
-        ),
+        digitalPinToInterrupt(BUTTON_PIN),
         buttonISR,
         FALLING
     );
+
+
+    // --------------------------------------------------------
+    // FreeRTOS tasks
+    // --------------------------------------------------------
 
     xTaskCreate(
         SensorTask,
@@ -216,14 +204,16 @@ void setup()
         nullptr
     );
 
-    Serial.println(
-        "All FreeRTOS tasks started."
-    );
+
+    Serial.println("All FreeRTOS tasks started.");
 }
+
+
+// ============================================================
+// LOOP
+// ============================================================
 
 void loop()
 {
-    vTaskDelay(
-        pdMS_TO_TICKS(1000)
-    );
+    vTaskDelay(pdMS_TO_TICKS(1000));
 }
