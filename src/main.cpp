@@ -7,15 +7,7 @@
 #include "app.h"
 
 // RS485 on ESP32 UART2
-HardwareSerial RS485(2);
 
-// OLED
-Adafruit_SSD1306 display(
-    128,
-    64,
-    &Wire,
-    -1
-);
 
 
 // ============================================================
@@ -24,10 +16,6 @@ Adafruit_SSD1306 display(
 
 void setup()
 {
-    // --------------------------------------------------------
-    // Serial
-    // --------------------------------------------------------
-
     Serial.begin(115200);
 
     delay(1000);
@@ -38,27 +26,12 @@ void setup()
     Serial.println("Starting...");
     Serial.println("================================");
 
-
-    // --------------------------------------------------------
-    // CO2 valve
-    // --------------------------------------------------------
-
     pinMode(CO2_VALVE_PIN, OUTPUT);
     digitalWrite(CO2_VALVE_PIN, LOW);
-
-
-    // --------------------------------------------------------
-    // Encoder + button
-    // --------------------------------------------------------
 
     pinMode(ENCODER_A_PIN, INPUT_PULLUP);
     pinMode(ENCODER_B_PIN, INPUT_PULLUP);
     pinMode(BUTTON_PIN, INPUT_PULLUP);
-
-
-    // --------------------------------------------------------
-    // RS485
-    // --------------------------------------------------------
 
     pinMode(RS485_DE_RE_PIN, OUTPUT);
     digitalWrite(RS485_DE_RE_PIN, LOW);
@@ -69,11 +42,6 @@ void setup()
         RS485_RX_PIN,
         RS485_TX_PIN
     );
-
-
-    // --------------------------------------------------------
-    // I2C / OLED
-    // --------------------------------------------------------
 
     Wire.begin(
         OLED_SDA_PIN,
@@ -89,22 +57,14 @@ void setup()
     else
     {
         display.clearDisplay();
-
         display.setTextSize(1);
         display.setTextColor(SSD1306_WHITE);
-
         display.setCursor(0, 0);
         display.println("CO2 Controller");
         display.println();
         display.println("Starting...");
-
         display.display();
     }
-
-
-    // --------------------------------------------------------
-    // Mutexes
-    // --------------------------------------------------------
 
     sensorDataMutex = xSemaphoreCreateMutex();
     rs485Mutex = xSemaphoreCreateMutex();
@@ -119,11 +79,6 @@ void setup()
             delay(1000);
         }
     }
-
-
-    // --------------------------------------------------------
-    // Queues
-    // --------------------------------------------------------
 
     uiEventQueue = xQueueCreate(
         UI_QUEUE_LENGTH,
@@ -146,11 +101,6 @@ void setup()
         }
     }
 
-
-    // --------------------------------------------------------
-    // Interrupts
-    // --------------------------------------------------------
-
     attachInterrupt(
         digitalPinToInterrupt(ENCODER_A_PIN),
         encoderISR,
@@ -162,11 +112,6 @@ void setup()
         buttonISR,
         FALLING
     );
-
-
-    // --------------------------------------------------------
-    // FreeRTOS tasks
-    // --------------------------------------------------------
 
     xTaskCreate(
         SensorTask,
@@ -204,14 +149,8 @@ void setup()
         nullptr
     );
 
-
     Serial.println("All FreeRTOS tasks started.");
 }
-
-
-// ============================================================
-// LOOP
-// ============================================================
 
 void loop()
 {

@@ -1,5 +1,5 @@
-#include "app.h"
 #include "config.h"
+#include "app.h"
 
 #include <Arduino.h>
 #include <Wire.h>
