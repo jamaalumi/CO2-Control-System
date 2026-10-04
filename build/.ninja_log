@@ -1,0 +1,15 @@
+# ninja log v7
+25	100	8128352752652013	CMakeFiles/picotoolForceReconfigure	ac7449778a777e4a
+25	100	8128352752652013	C:/Users/jamaa/CO2-Control-System/build/CMakeFiles/picotoolForceReconfigure	ac7449778a777e4a
+40	157	8128352752880448	pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.obj	a74c466f52825906
+101	192	8128352754329812	picotool/src/picotoolBuild-stamp/picotoolBuild-mkdir	c0eda397dbf9fa6
+101	192	8128352754329812	C:/Users/jamaa/CO2-Control-System/build/picotool/src/picotoolBuild-stamp/picotoolBuild-mkdir	c0eda397dbf9fa6
+193	265	8128352754997639	picotool/src/picotoolBuild-stamp/picotoolBuild-download	347803b37c90ef74
+193	265	8128352754997639	C:/Users/jamaa/CO2-Control-System/build/picotool/src/picotoolBuild-stamp/picotoolBuild-download	347803b37c90ef74
+266	349	8128352755843109	picotool/src/picotoolBuild-stamp/picotoolBuild-update	2dcfdef0bce1fab4
+266	349	8128352755843109	C:/Users/jamaa/CO2-Control-System/build/picotool/src/picotoolBuild-stamp/picotoolBuild-update	2dcfdef0bce1fab4
+350	427	8128352756668537	picotool/src/picotoolBuild-stamp/picotoolBuild-patch	216a0e8ad4002e51
+350	427	8128352756668537	C:/Users/jamaa/CO2-Control-System/build/picotool/src/picotoolBuild-stamp/picotoolBuild-patch	216a0e8ad4002e51
+160	1918	8128352771577453	pico-sdk/src/rp2040/boot_stage2/bs2_default.elf	5c5c9dbccea49f64
+160	1918	8128352771577453	pico-sdk/src/rp2040/boot_stage2/bs2_default.dis	5c5c9dbccea49f64
+160	1918	8128352771577453	C:/Users/jamaa/CO2-Control-System/build/pico-sdk/src/rp2040/boot_stage2/bs2_default.dis	5c5c9dbccea49f64

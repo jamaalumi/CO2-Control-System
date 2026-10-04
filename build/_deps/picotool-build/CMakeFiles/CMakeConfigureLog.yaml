@@ -1,0 +1,3363 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineSystem.cmake:218 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Windows - 10.0.26200 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompiler.cmake:63 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:64 (_cmake_find_compiler)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER"
+    description: "C compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: false
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cc"
+      - "gcc"
+      - "cl"
+      - "bcc"
+      - "xlc"
+      - "icx"
+      - "clang"
+    candidate_directories:
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/"
+      - "C:/Users/jamaa/.platformio/penv/"
+      - "C:/Users/jamaa/.platformio/python3/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/jamaa/.local/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/msys64/ucrt64/bin/"
+    searched_directories:
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/cc.com"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/cc.exe"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/cc"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/gcc.com"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/gcc.exe"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/gcc"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/cl.com"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/cl.exe"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/cl"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/bcc.com"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/bcc.exe"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/bcc"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/xlc.com"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/xlc.exe"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/xlc"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/icx.com"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/icx.exe"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/icx"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/clang.com"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/clang.exe"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/clang"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/cc.com"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/cc.exe"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/cc"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc.com"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc.exe"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/cl.com"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/cl.exe"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/cl"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/bcc.com"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/bcc.exe"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/bcc"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/xlc.com"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/xlc.exe"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/xlc"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/icx.com"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/icx.exe"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/icx"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/clang.com"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/clang.exe"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/clang"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/cc.com"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/cc.exe"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/cc"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc.com"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc.exe"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/cl.com"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/cl.exe"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/cl"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/bcc.com"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/bcc.exe"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/bcc"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/xlc.com"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/xlc.exe"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/xlc"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/icx.com"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/icx.exe"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/icx"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/clang.com"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/clang.exe"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/clang"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/cc.com"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/cc.exe"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/cc"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc.com"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc.exe"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/cl.com"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/cl.exe"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/cl"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/bcc.com"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/bcc.exe"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/bcc"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/xlc.com"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/xlc.exe"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/xlc"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/icx.com"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/icx.exe"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/icx"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/clang.com"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/clang.exe"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/clang"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/cc.com"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/cc.exe"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/cc"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/gcc.com"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/gcc.exe"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/gcc"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/cl.com"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/cl.exe"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/cl"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/bcc.com"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/bcc.exe"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/bcc"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/xlc.com"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/xlc.exe"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/xlc"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/icx.com"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/icx.exe"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/icx"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/clang.com"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/clang.exe"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/clang"
+      - "C:/Users/jamaa/.platformio/penv/cc.com"
+      - "C:/Users/jamaa/.platformio/penv/cc.exe"
+      - "C:/Users/jamaa/.platformio/penv/cc"
+      - "C:/Users/jamaa/.platformio/penv/gcc.com"
+      - "C:/Users/jamaa/.platformio/penv/gcc.exe"
+      - "C:/Users/jamaa/.platformio/penv/gcc"
+      - "C:/Users/jamaa/.platformio/penv/cl.com"
+      - "C:/Users/jamaa/.platformio/penv/cl.exe"
+      - "C:/Users/jamaa/.platformio/penv/cl"
+      - "C:/Users/jamaa/.platformio/penv/bcc.com"
+      - "C:/Users/jamaa/.platformio/penv/bcc.exe"
+      - "C:/Users/jamaa/.platformio/penv/bcc"
+      - "C:/Users/jamaa/.platformio/penv/xlc.com"
+      - "C:/Users/jamaa/.platformio/penv/xlc.exe"
+      - "C:/Users/jamaa/.platformio/penv/xlc"
+      - "C:/Users/jamaa/.platformio/penv/icx.com"
+      - "C:/Users/jamaa/.platformio/penv/icx.exe"
+      - "C:/Users/jamaa/.platformio/penv/icx"
+      - "C:/Users/jamaa/.platformio/penv/clang.com"
+      - "C:/Users/jamaa/.platformio/penv/clang.exe"
+      - "C:/Users/jamaa/.platformio/penv/clang"
+      - "C:/Users/jamaa/.platformio/python3/cc.com"
+      - "C:/Users/jamaa/.platformio/python3/cc.exe"
+      - "C:/Users/jamaa/.platformio/python3/cc"
+      - "C:/Users/jamaa/.platformio/python3/gcc.com"
+      - "C:/Users/jamaa/.platformio/python3/gcc.exe"
+      - "C:/Users/jamaa/.platformio/python3/gcc"
+      - "C:/Users/jamaa/.platformio/python3/cl.com"
+      - "C:/Users/jamaa/.platformio/python3/cl.exe"
+      - "C:/Users/jamaa/.platformio/python3/cl"
+      - "C:/Users/jamaa/.platformio/python3/bcc.com"
+      - "C:/Users/jamaa/.platformio/python3/bcc.exe"
+      - "C:/Users/jamaa/.platformio/python3/bcc"
+      - "C:/Users/jamaa/.platformio/python3/xlc.com"
+      - "C:/Users/jamaa/.platformio/python3/xlc.exe"
+      - "C:/Users/jamaa/.platformio/python3/xlc"
+      - "C:/Users/jamaa/.platformio/python3/icx.com"
+      - "C:/Users/jamaa/.platformio/python3/icx.exe"
+      - "C:/Users/jamaa/.platformio/python3/icx"
+      - "C:/Users/jamaa/.platformio/python3/clang.com"
+      - "C:/Users/jamaa/.platformio/python3/clang.exe"
+      - "C:/Users/jamaa/.platformio/python3/clang"
+      - "C:/Windows/System32/cc.com"
+      - "C:/Windows/System32/cc.exe"
+      - "C:/Windows/System32/cc"
+      - "C:/Windows/System32/gcc.com"
+      - "C:/Windows/System32/gcc.exe"
+      - "C:/Windows/System32/gcc"
+      - "C:/Windows/System32/cl.com"
+      - "C:/Windows/System32/cl.exe"
+      - "C:/Windows/System32/cl"
+      - "C:/Windows/System32/bcc.com"
+      - "C:/Windows/System32/bcc.exe"
+      - "C:/Windows/System32/bcc"
+      - "C:/Windows/System32/xlc.com"
+      - "C:/Windows/System32/xlc.exe"
+      - "C:/Windows/System32/xlc"
+      - "C:/Windows/System32/icx.com"
+      - "C:/Windows/System32/icx.exe"
+      - "C:/Windows/System32/icx"
+      - "C:/Windows/System32/clang.com"
+      - "C:/Windows/System32/clang.exe"
+      - "C:/Windows/System32/clang"
+      - "C:/Windows/cc.com"
+      - "C:/Windows/cc.exe"
+      - "C:/Windows/cc"
+      - "C:/Windows/gcc.com"
+      - "C:/Windows/gcc.exe"
+      - "C:/Windows/gcc"
+      - "C:/Windows/cl.com"
+      - "C:/Windows/cl.exe"
+      - "C:/Windows/cl"
+      - "C:/Windows/bcc.com"
+      - "C:/Windows/bcc.exe"
+      - "C:/Windows/bcc"
+      - "C:/Windows/xlc.com"
+      - "C:/Windows/xlc.exe"
+      - "C:/Windows/xlc"
+      - "C:/Windows/icx.com"
+      - "C:/Windows/icx.exe"
+      - "C:/Windows/icx"
+      - "C:/Windows/clang.com"
+      - "C:/Windows/clang.exe"
+      - "C:/Windows/clang"
+      - "C:/Windows/System32/wbem/cc.com"
+      - "C:/Windows/System32/wbem/cc.exe"
+      - "C:/Windows/System32/wbem/cc"
+      - "C:/Windows/System32/wbem/gcc.com"
+      - "C:/Windows/System32/wbem/gcc.exe"
+      - "C:/Windows/System32/wbem/gcc"
+      - "C:/Windows/System32/wbem/cl.com"
+      - "C:/Windows/System32/wbem/cl.exe"
+      - "C:/Windows/System32/wbem/cl"
+      - "C:/Windows/System32/wbem/bcc.com"
+      - "C:/Windows/System32/wbem/bcc.exe"
+      - "C:/Windows/System32/wbem/bcc"
+      - "C:/Windows/System32/wbem/xlc.com"
+      - "C:/Windows/System32/wbem/xlc.exe"
+      - "C:/Windows/System32/wbem/xlc"
+      - "C:/Windows/System32/wbem/icx.com"
+      - "C:/Windows/System32/wbem/icx.exe"
+      - "C:/Windows/System32/wbem/icx"
+      - "C:/Windows/System32/wbem/clang.com"
+      - "C:/Windows/System32/wbem/clang.exe"
+      - "C:/Windows/System32/wbem/clang"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/cc.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/cc.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/cc"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/cl.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/cl.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/cl"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/bcc.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/bcc.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/bcc"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/xlc.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/xlc.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/xlc"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/icx.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/icx.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/icx"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/clang.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/clang.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/clang"
+      - "C:/Windows/System32/OpenSSH/cc.com"
+      - "C:/Windows/System32/OpenSSH/cc.exe"
+      - "C:/Windows/System32/OpenSSH/cc"
+      - "C:/Windows/System32/OpenSSH/gcc.com"
+      - "C:/Windows/System32/OpenSSH/gcc.exe"
+      - "C:/Windows/System32/OpenSSH/gcc"
+      - "C:/Windows/System32/OpenSSH/cl.com"
+      - "C:/Windows/System32/OpenSSH/cl.exe"
+      - "C:/Windows/System32/OpenSSH/cl"
+      - "C:/Windows/System32/OpenSSH/bcc.com"
+      - "C:/Windows/System32/OpenSSH/bcc.exe"
+      - "C:/Windows/System32/OpenSSH/bcc"
+      - "C:/Windows/System32/OpenSSH/xlc.com"
+      - "C:/Windows/System32/OpenSSH/xlc.exe"
+      - "C:/Windows/System32/OpenSSH/xlc"
+      - "C:/Windows/System32/OpenSSH/icx.com"
+      - "C:/Windows/System32/OpenSSH/icx.exe"
+      - "C:/Windows/System32/OpenSSH/icx"
+      - "C:/Windows/System32/OpenSSH/clang.com"
+      - "C:/Windows/System32/OpenSSH/clang.exe"
+      - "C:/Windows/System32/OpenSSH/clang"
+      - "C:/Program Files/dotnet/cc.com"
+      - "C:/Program Files/dotnet/cc.exe"
+      - "C:/Program Files/dotnet/cc"
+      - "C:/Program Files/dotnet/gcc.com"
+      - "C:/Program Files/dotnet/gcc.exe"
+      - "C:/Program Files/dotnet/gcc"
+      - "C:/Program Files/dotnet/cl.com"
+      - "C:/Program Files/dotnet/cl.exe"
+      - "C:/Program Files/dotnet/cl"
+      - "C:/Program Files/dotnet/bcc.com"
+      - "C:/Program Files/dotnet/bcc.exe"
+      - "C:/Program Files/dotnet/bcc"
+      - "C:/Program Files/dotnet/xlc.com"
+      - "C:/Program Files/dotnet/xlc.exe"
+      - "C:/Program Files/dotnet/xlc"
+      - "C:/Program Files/dotnet/icx.com"
+      - "C:/Program Files/dotnet/icx.exe"
+      - "C:/Program Files/dotnet/icx"
+      - "C:/Program Files/dotnet/clang.com"
+      - "C:/Program Files/dotnet/clang.exe"
+      - "C:/Program Files/dotnet/clang"
+      - "C:/Program Files/Git/cmd/cc.com"
+      - "C:/Program Files/Git/cmd/cc.exe"
+      - "C:/Program Files/Git/cmd/cc"
+      - "C:/Program Files/Git/cmd/gcc.com"
+      - "C:/Program Files/Git/cmd/gcc.exe"
+      - "C:/Program Files/Git/cmd/gcc"
+      - "C:/Program Files/Git/cmd/cl.com"
+      - "C:/Program Files/Git/cmd/cl.exe"
+      - "C:/Program Files/Git/cmd/cl"
+      - "C:/Program Files/Git/cmd/bcc.com"
+      - "C:/Program Files/Git/cmd/bcc.exe"
+      - "C:/Program Files/Git/cmd/bcc"
+      - "C:/Program Files/Git/cmd/xlc.com"
+      - "C:/Program Files/Git/cmd/xlc.exe"
+      - "C:/Program Files/Git/cmd/xlc"
+      - "C:/Program Files/Git/cmd/icx.com"
+      - "C:/Program Files/Git/cmd/icx.exe"
+      - "C:/Program Files/Git/cmd/icx"
+      - "C:/Program Files/Git/cmd/clang.com"
+      - "C:/Program Files/Git/cmd/clang.exe"
+      - "C:/Program Files/Git/cmd/clang"
+      - "C:/Program Files/CMake/bin/cc.com"
+      - "C:/Program Files/CMake/bin/cc.exe"
+      - "C:/Program Files/CMake/bin/cc"
+      - "C:/Program Files/CMake/bin/gcc.com"
+      - "C:/Program Files/CMake/bin/gcc.exe"
+      - "C:/Program Files/CMake/bin/gcc"
+      - "C:/Program Files/CMake/bin/cl.com"
+      - "C:/Program Files/CMake/bin/cl.exe"
+      - "C:/Program Files/CMake/bin/cl"
+      - "C:/Program Files/CMake/bin/bcc.com"
+      - "C:/Program Files/CMake/bin/bcc.exe"
+      - "C:/Program Files/CMake/bin/bcc"
+      - "C:/Program Files/CMake/bin/xlc.com"
+      - "C:/Program Files/CMake/bin/xlc.exe"
+      - "C:/Program Files/CMake/bin/xlc"
+      - "C:/Program Files/CMake/bin/icx.com"
+      - "C:/Program Files/CMake/bin/icx.exe"
+      - "C:/Program Files/CMake/bin/icx"
+      - "C:/Program Files/CMake/bin/clang.com"
+      - "C:/Program Files/CMake/bin/clang.exe"
+      - "C:/Program Files/CMake/bin/clang"
+      - "C:/Users/jamaa/.local/bin/cc.com"
+      - "C:/Users/jamaa/.local/bin/cc.exe"
+      - "C:/Users/jamaa/.local/bin/cc"
+      - "C:/Users/jamaa/.local/bin/gcc.com"
+      - "C:/Users/jamaa/.local/bin/gcc.exe"
+      - "C:/Users/jamaa/.local/bin/gcc"
+      - "C:/Users/jamaa/.local/bin/cl.com"
+      - "C:/Users/jamaa/.local/bin/cl.exe"
+      - "C:/Users/jamaa/.local/bin/cl"
+      - "C:/Users/jamaa/.local/bin/bcc.com"
+      - "C:/Users/jamaa/.local/bin/bcc.exe"
+      - "C:/Users/jamaa/.local/bin/bcc"
+      - "C:/Users/jamaa/.local/bin/xlc.com"
+      - "C:/Users/jamaa/.local/bin/xlc.exe"
+      - "C:/Users/jamaa/.local/bin/xlc"
+      - "C:/Users/jamaa/.local/bin/icx.com"
+      - "C:/Users/jamaa/.local/bin/icx.exe"
+      - "C:/Users/jamaa/.local/bin/icx"
+      - "C:/Users/jamaa/.local/bin/clang.com"
+      - "C:/Users/jamaa/.local/bin/clang.exe"
+      - "C:/Users/jamaa/.local/bin/clang"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/cc.com"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/cc.exe"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/cc"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/gcc.com"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/gcc.exe"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/gcc"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/cl.com"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/cl.exe"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/cl"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/bcc.com"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/bcc.exe"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/bcc"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/xlc.com"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/xlc.exe"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/xlc"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/icx.com"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/icx.exe"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/icx"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/clang.com"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/clang.exe"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/clang"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/cc.com"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/cc.exe"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/cc"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/gcc.com"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/gcc.exe"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/gcc"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/cl.com"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/cl.exe"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/cl"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/bcc.com"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/bcc.exe"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/bcc"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/xlc.com"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/xlc.exe"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/xlc"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/icx.com"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/icx.exe"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/icx"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/clang.com"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/clang.exe"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/clang"
+      - "C:/msys64/ucrt64/bin/cc.com"
+    found: "C:/msys64/ucrt64/bin/cc.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/msys64/ucrt64/bin/cc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/msys64/ucrt64/bin/cc.exe 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/msys64/ucrt64/bin/cc.exe 
+      Build flags: 
+      Id flags: -Aa 
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/msys64/ucrt64/bin/cc.exe 
+      Build flags: 
+      Id flags: -D__CLASSIC_C__ 
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/msys64/ucrt64/bin/cc.exe 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      cc.exe: warning: '-mcpu=' is deprecated; use '-mtune=' or '-march=' instead
+      cc.exe: error: unrecognized command-line option '--target=arm-arm-none-eabi'
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/msys64/ucrt64/bin/cc.exe 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/msys64/ucrt64/bin/cc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/msys64/ucrt64/bin/cc.exe 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/msys64/ucrt64/bin/cc.exe 
+      Build flags: 
+      Id flags: -Aa 
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/msys64/ucrt64/bin/cc.exe 
+      Build flags: 
+      Id flags: -D__CLASSIC_C__ 
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/msys64/ucrt64/bin/cc.exe 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      cc.exe: warning: '-mcpu=' is deprecated; use '-mtune=' or '-march=' instead
+      cc.exe: error: unrecognized command-line option '--target=arm-arm-none-eabi'
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/msys64/ucrt64/bin/cc.exe 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:1341 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:97 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+      cc.exe: fatal error: no input files
+      compilation terminated.
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:1341 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:97 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+      cc.exe: fatal error: no input files
+      compilation terminated.
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ar"
+    candidate_directories:
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/"
+      - "C:/Users/jamaa/.platformio/penv/"
+      - "C:/Users/jamaa/.platformio/python3/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/jamaa/.local/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/msys64/ucrt64/bin/ar.com"
+    found: "C:/msys64/ucrt64/bin/ar.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ranlib"
+    candidate_directories:
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/"
+      - "C:/Users/jamaa/.platformio/penv/"
+      - "C:/Users/jamaa/.platformio/python3/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/jamaa/.local/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/msys64/ucrt64/bin/ranlib.com"
+    found: "C:/msys64/ucrt64/bin/ranlib.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "strip"
+    candidate_directories:
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/"
+      - "C:/Users/jamaa/.platformio/penv/"
+      - "C:/Users/jamaa/.platformio/python3/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/jamaa/.local/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/msys64/ucrt64/bin/strip.com"
+    found: "C:/msys64/ucrt64/bin/strip.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ld"
+    candidate_directories:
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/"
+      - "C:/Users/jamaa/.platformio/penv/"
+      - "C:/Users/jamaa/.platformio/python3/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/jamaa/.local/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/msys64/ucrt64/bin/ld.com"
+    found: "C:/msys64/ucrt64/bin/ld.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nm"
+    candidate_directories:
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/"
+      - "C:/Users/jamaa/.platformio/penv/"
+      - "C:/Users/jamaa/.platformio/python3/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/jamaa/.local/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/msys64/ucrt64/bin/nm.com"
+    found: "C:/msys64/ucrt64/bin/nm.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objdump"
+    candidate_directories:
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/"
+      - "C:/Users/jamaa/.platformio/penv/"
+      - "C:/Users/jamaa/.platformio/python3/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/jamaa/.local/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/msys64/ucrt64/bin/objdump.com"
+    found: "C:/msys64/ucrt64/bin/objdump.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objcopy"
+    candidate_directories:
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/"
+      - "C:/Users/jamaa/.platformio/penv/"
+      - "C:/Users/jamaa/.platformio/python3/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/jamaa/.local/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/msys64/ucrt64/bin/objcopy.com"
+    found: "C:/msys64/ucrt64/bin/objcopy.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "readelf"
+    candidate_directories:
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/"
+      - "C:/Users/jamaa/.platformio/penv/"
+      - "C:/Users/jamaa/.platformio/python3/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/jamaa/.local/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/msys64/ucrt64/bin/readelf.com"
+    found: "C:/msys64/ucrt64/bin/readelf.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "dlltool"
+    candidate_directories:
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/"
+      - "C:/Users/jamaa/.platformio/penv/"
+      - "C:/Users/jamaa/.platformio/python3/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/jamaa/.local/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/msys64/ucrt64/bin/dlltool.com"
+    found: "C:/msys64/ucrt64/bin/dlltool.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "addr2line"
+    candidate_directories:
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/"
+      - "C:/Users/jamaa/.platformio/penv/"
+      - "C:/Users/jamaa/.platformio/python3/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/jamaa/.local/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/msys64/ucrt64/bin/addr2line.com"
+    found: "C:/msys64/ucrt64/bin/addr2line.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "tapi"
+    candidate_directories:
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/"
+      - "C:/Users/jamaa/.platformio/penv/"
+      - "C:/Users/jamaa/.platformio/python3/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/jamaa/.local/bin/"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/msys64/ucrt64/bin/tapi.com"
+      - "C:/msys64/ucrt64/bin/tapi.exe"
+      - "C:/msys64/ucrt64/bin/tapi"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/tapi.com"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/tapi.exe"
+      - "C:/Users/jamaa/.platformio/packages/toolchain-gccarmnoneeabi/bin/tapi"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/tapi.com"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/tapi.exe"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/tapi"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi.com"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi.exe"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi.com"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi.exe"
+      - "C:/Users/jamaa/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/tapi.com"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/tapi.exe"
+      - "C:/Users/jamaa/.platformio/penv/Scripts/tapi"
+      - "C:/Users/jamaa/.platformio/penv/tapi.com"
+      - "C:/Users/jamaa/.platformio/penv/tapi.exe"
+      - "C:/Users/jamaa/.platformio/penv/tapi"
+      - "C:/Users/jamaa/.platformio/python3/tapi.com"
+      - "C:/Users/jamaa/.platformio/python3/tapi.exe"
+      - "C:/Users/jamaa/.platformio/python3/tapi"
+      - "C:/Windows/System32/tapi.com"
+      - "C:/Windows/System32/tapi.exe"
+      - "C:/Windows/System32/tapi"
+      - "C:/Windows/tapi.com"
+      - "C:/Windows/tapi.exe"
+      - "C:/Windows/tapi"
+      - "C:/Windows/System32/wbem/tapi.com"
+      - "C:/Windows/System32/wbem/tapi.exe"
+      - "C:/Windows/System32/wbem/tapi"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/tapi.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/tapi.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/tapi"
+      - "C:/Windows/System32/OpenSSH/tapi.com"
+      - "C:/Windows/System32/OpenSSH/tapi.exe"
+      - "C:/Windows/System32/OpenSSH/tapi"
+      - "C:/Program Files/dotnet/tapi.com"
+      - "C:/Program Files/dotnet/tapi.exe"
+      - "C:/Program Files/dotnet/tapi"
+      - "C:/Program Files/Git/cmd/tapi.com"
+      - "C:/Program Files/Git/cmd/tapi.exe"
+      - "C:/Program Files/Git/cmd/tapi"
+      - "C:/Program Files/CMake/bin/tapi.com"
+      - "C:/Program Files/CMake/bin/tapi.exe"
+      - "C:/Program Files/CMake/bin/tapi"
+      - "C:/Users/jamaa/.local/bin/tapi.com"
+      - "C:/Users/jamaa/.local/bin/tapi.exe"
+      - "C:/Users/jamaa/.local/bin/tapi"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/tapi.com"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/tapi.exe"
+      - "C:/Users/jamaa/AppData/Local/Microsoft/WindowsApps/tapi"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/tapi.com"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/tapi.exe"
+      - "C:/Users/jamaa/AppData/Local/Programs/Microsoft VS Code/bin/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompiler.cmake:54 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:69 (_cmake_find_compiler)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER"
+    description: "CXX compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "c++"
+      - "g++"
+      - "cl"
+      - "bcc"
+      - "icx"
+      - "clang++"
+    candidate_directories:
+      - "C:/msys64/ucrt64/bin/"
+    searched_directories:
+      - "C:/msys64/ucrt64/bin/c++.com"
+    found: "C:/msys64/ucrt64/bin/c++.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/msys64/ucrt64/bin/c++.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/msys64/ucrt64/bin/c++.exe 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/msys64/ucrt64/bin/c++.exe 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      c++.exe: error: unrecognized command-line option '--c++'
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/msys64/ucrt64/bin/c++.exe 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      c++.exe: error: unrecognized command-line option '--ec++'; did you mean '-Weffc++'?
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/msys64/ucrt64/bin/c++.exe 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      c++.exe: warning: '-mcpu=' is deprecated; use '-mtune=' or '-march=' instead
+      c++.exe: error: unrecognized command-line option '--target=arm-arm-none-eabi'
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/msys64/ucrt64/bin/c++.exe 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/msys64/ucrt64/bin/c++.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/msys64/ucrt64/bin/c++.exe 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/msys64/ucrt64/bin/c++.exe 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      c++.exe: error: unrecognized command-line option '--c++'
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/msys64/ucrt64/bin/c++.exe 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      c++.exe: error: unrecognized command-line option '--ec++'; did you mean '-Weffc++'?
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/msys64/ucrt64/bin/c++.exe 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      c++.exe: warning: '-mcpu=' is deprecated; use '-mtune=' or '-march=' instead
+      c++.exe: error: unrecognized command-line option '--target=arm-arm-none-eabi'
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\jamaa\\.platformio\\packages\\toolchain-gccarmnoneeabi\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\jamaa\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\jamaa\\.platformio\\penv\\Scripts"
+        - "C:\\Users\\jamaa\\.platformio\\penv"
+        - "C:\\Users\\jamaa\\.platformio\\python3"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\jamaa\\.local\\bin"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\jamaa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Users/jamaa/CO2-Control-System/build/_deps"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/msys64/ucrt64/bin/c++.exe 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:1341 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:97 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      c++.exe: fatal error: no input files
+      compilation terminated.
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:1341 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:97 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      c++.exe: fatal error: no input files
+      compilation terminated.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:123 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/jamaa/CO2-Control-System/build/_deps/picotool-build/CMakeFiles/CMakeScratch/TryCompile-0ualyr"
+      binary: "C:/Users/jamaa/CO2-Control-System/build/_deps/picotool-build/CMakeFiles/CMakeScratch/TryCompile-0ualyr"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: false
+      stdout: |
+        Change Dir: 'C:/Users/jamaa/CO2-Control-System/build/_deps/picotool-build/CMakeFiles/CMakeScratch/TryCompile-0ualyr'
+        
+        Run Build Command(s): C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_32830
+        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe    -o CMakeFiles\\cmTC_32830.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.4\\Modules\\CMakeCCompilerABI.c"
+        FAILED: [code=1] CMakeFiles/cmTC_32830.dir/CMakeCCompilerABI.c.obj 
+        C:\\msys64\\ucrt64\\bin\\cc.exe    -o CMakeFiles\\cmTC_32830.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.4\\Modules\\CMakeCCompilerABI.c"
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working C compiler: C:/msys64/ucrt64/bin/cc.exe"
+    directories:
+      source: "C:/Users/jamaa/CO2-Control-System/build/_deps/picotool-build/CMakeFiles/CMakeScratch/TryCompile-g2ze6n"
+      binary: "C:/Users/jamaa/CO2-Control-System/build/_deps/picotool-build/CMakeFiles/CMakeScratch/TryCompile-g2ze6n"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: false
+      stdout: |
+        Change Dir: 'C:/Users/jamaa/CO2-Control-System/build/_deps/picotool-build/CMakeFiles/CMakeScratch/TryCompile-g2ze6n'
+        
+        Run Build Command(s): C:/Users/jamaa/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_c67e4
+        [1/2] C:\\msys64\\ucrt64\\bin\\cc.exe    -o CMakeFiles\\cmTC_c67e4.dir\\testCCompiler.c.obj -c C:\\Users\\jamaa\\CO2-Control-System\\build\\_deps\\picotool-build\\CMakeFiles\\CMakeScratch\\TryCompile-g2ze6n\\testCCompiler.c
+        FAILED: [code=1] CMakeFiles/cmTC_c67e4.dir/testCCompiler.c.obj 
+        C:\\msys64\\ucrt64\\bin\\cc.exe    -o CMakeFiles\\cmTC_c67e4.dir\\testCCompiler.c.obj -c C:\\Users\\jamaa\\CO2-Control-System\\build\\_deps\\picotool-build\\CMakeFiles\\CMakeScratch\\TryCompile-g2ze6n\\testCCompiler.c
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
