@@ -1,3 +1,10 @@
+#pragma once
+
+#include "FreeRTOS.h"
+#include "task.h"
+#include "pico/stdlib.h"
+#include "hardware/uart.h"
+
 #ifndef CONFIG_H
 #define CONFIG_H
 
@@ -19,7 +26,7 @@ constexpr uint CO2_VALVE_PIN = 27;
 
 constexpr uint UI_BUTTON_PIN = 9;
 
-constexpr uart_inst_t *MODBUS_UART = uart1;
+#define MODBUS_UART uart1
 
 constexpr uint MODBUS_TX_PIN = 4;
 constexpr uint MODBUS_RX_PIN = 5;

@@ -107,7 +107,7 @@ while (true)
         {
             uint16_t new_setpoint =
                 g_settings.co2_setpoint_ppm
-                \+ 100;
+                +100;
 
             if (
                 new_setpoint >
