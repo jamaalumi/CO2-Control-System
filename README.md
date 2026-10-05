@@ -76,7 +76,7 @@ The Network Task:
 
 Sensor readings are stored in a shared structure:
 
-```cpp
+cpp
 struct SensorData
 {
     float co2Ppm;

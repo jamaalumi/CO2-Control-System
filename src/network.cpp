@@ -14,7 +14,7 @@ void *parameter
 {
 (void)parameter;
 
-```
+
 std::cout
     << "Network task started.\n";
 
@@ -50,6 +50,6 @@ while (true)
         )
     );
 }
-```
+
 
 }

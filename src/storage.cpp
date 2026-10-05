@@ -13,7 +13,7 @@ constexpr uint32_t FLASH_TARGET_OFFSET =
 (2 * 1024 * 1024)
 - FLASH_SECTOR_SIZE;
 
-```
+
 struct StoredSettings
 {
     uint32_t magic;
@@ -22,7 +22,7 @@ struct StoredSettings
 
     uint16_t reserved;
 };
-```
+
 
 }
 
@@ -38,7 +38,7 @@ XIP_BASE +
 FLASH_TARGET_OFFSET
 );
 
-```
+
 StoredSettings stored;
 
 std::memcpy(
@@ -68,7 +68,7 @@ settings.co2_setpoint_ppm =
     stored.co2_setpoint_ppm;
 
 return true;
-```
+
 
 }
 
@@ -85,7 +85,7 @@ Config::MAX_CO2_SETPOINT_PPM
 return false;
 }
 
-```
+
 StoredSettings stored = {
     Config::SETTINGS_MAGIC,
     settings.co2_setpoint_ppm,
@@ -127,6 +127,6 @@ restore_interrupts(
 );
 
 return true;
-```
+
 
 }

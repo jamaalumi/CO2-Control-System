@@ -23,7 +23,7 @@ Config::MODBUS_UART,
 Config::MODBUS_BAUD
 );
 
-```
+
 gpio_set_function(
     Config::MODBUS_TX_PIN,
     GPIO_FUNC_UART
@@ -47,7 +47,7 @@ std::cout
     << "Modbus UART initialized at "
     << Config::MODBUS_BAUD
     << " baud.\n";
-```
+
 
 }
 
@@ -64,14 +64,14 @@ uint16_t count
 * Do not invent device register addresses.
 */
 
-```
+
 (void)address;
 (void)register_address;
 (void)data;
 (void)count;
 
 return false;
-```
+
 
 }
 
@@ -85,13 +85,13 @@ uint16_t value
 * Modbus RTU write implementation.
 */
 
-```
+
 (void)address;
 (void)register_address;
 (void)value;
 
 return false;
-```
+
 
 }
 
@@ -102,7 +102,7 @@ uint8_t percent
 if (percent > 100)
 percent = 100;
 
-```
+
 /*
  * Produal AO1:
  *
@@ -115,7 +115,7 @@ percent = 100;
 (void)percent;
 
 return false;
-```
+
 
 }
 
@@ -129,11 +129,11 @@ uint32_t &count
 * Counter clears after Modbus read.
 */
 
-```
+
 count = 0;
 
 return false;
-```
+
 
 }
 
@@ -147,11 +147,11 @@ uint16_t &co2_ppm
 * Exact Modbus register needs to be confirmed.
 */
 
-```
+
 co2_ppm = 0;
 
 return false;
-```
+
 
 }
 
@@ -166,12 +166,12 @@ float &humidity_percent
 * Exact Modbus registers need to be confirmed.
 */
 
-```
+
 temperature_c = 0.0f;
 
 humidity_percent = 0.0f;
 
 return false;
-```
+
 
 }

@@ -21,7 +21,7 @@ uint32_t events
 (void)gpio;
 (void)events;
 
-```
+
 BaseType_t higher_priority_task_woken =
     pdFALSE;
 
@@ -39,7 +39,7 @@ xQueueSendFromISR(
 portYIELD_FROM_ISR(
     higher_priority_task_woken
 );
-```
+
 
 }
 
@@ -49,7 +49,7 @@ gpio_init(
 Config::UI_BUTTON_PIN
 );
 
-```
+
 gpio_set_dir(
     Config::UI_BUTTON_PIN,
     GPIO_IN
@@ -67,7 +67,7 @@ gpio_set_irq_enabled_with_callback(
     true,
     &gpio_callback
 );
-```
+
 
 }
 
@@ -77,7 +77,7 @@ void *parameter
 {
 (void)parameter;
 
-```
+
 std::cout
     << "UI task started.\n";
 
@@ -168,6 +168,6 @@ while (true)
         << copy.fan_pulse_count
         << "\n";
 }
-```
+
 
 }

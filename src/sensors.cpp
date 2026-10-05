@@ -28,11 +28,11 @@ float &pressure_pa
 * implemented from the sensor datasheet.
 */
 
-```
+
 pressure_pa = 0.0f;
 
 return false;
-```
+
 
 }
 
@@ -53,7 +53,7 @@ pdMS_TO_TICKS(100)
 {
 g_sensor_data.co2_ppm = co2;
 
-```
+
     g_sensor_data.temperature_c =
         temperature;
 
@@ -78,7 +78,7 @@ g_sensor_data.co2_ppm = co2;
         g_sensor_mutex
     );
 }
-```
+
 
 }
 
@@ -88,7 +88,7 @@ void *parameter
 {
 (void)parameter;
 
-```
+
 modbus_init();
 
 i2c_init(

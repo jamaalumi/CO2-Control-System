@@ -20,7 +20,6 @@ int main()
 {
 stdio_init_all();
 
-```
 sleep_ms(2000);
 
 std::cout << "\n========================================\n";
@@ -42,6 +41,6 @@ while (true)
 {
     tight_loop_contents();
 }
-```
+
 
 }

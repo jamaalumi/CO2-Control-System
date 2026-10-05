@@ -38,7 +38,7 @@ void app_init()
 g_sensor_mutex =
 xSemaphoreCreateMutex();
 
-```
+
 g_modbus_mutex =
     xSemaphoreCreateMutex();
 
@@ -78,7 +78,7 @@ if (!storage_load_settings(g_settings))
 }
 
 ui_init();
-```
+
 
 }
 
@@ -86,7 +86,7 @@ void app_start_tasks()
 {
 BaseType_t result;
 
-```
+
 result = xTaskCreate(
     sensors_task,
     "SENSORS",
@@ -134,6 +134,5 @@ result = xTaskCreate(
 
 if (result != pdPASS)
     task_creation_error("NETWORK");
-```
 
 }

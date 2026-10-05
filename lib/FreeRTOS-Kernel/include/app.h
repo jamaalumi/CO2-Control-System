@@ -21,7 +21,7 @@ uint32_t fan_pulse_count;
 bool fan_running;
 
 uint32_t timestamp_ms;
-```
+
 
 };
 

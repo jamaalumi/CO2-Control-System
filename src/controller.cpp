@@ -18,7 +18,7 @@ static uint16_t get_co2_setpoint()
 uint16_t setpoint =
 Config::DEFAULT_CO2_SETPOINT_PPM;
 
-```
+
 if (
     xSemaphoreTake(
         g_sensor_mutex,
@@ -44,7 +44,7 @@ if (
 }
 
 return setpoint;
-```
+
 
 }
 
@@ -52,7 +52,7 @@ static uint16_t get_co2_value()
 {
 uint16_t co2 = 0;
 
-```
+
 if (
     xSemaphoreTake(
         g_sensor_mutex,
@@ -69,7 +69,6 @@ if (
 }
 
 return co2;
-```
 
 }
 
@@ -88,12 +87,10 @@ produal_set_fan_percent(
 percent
 );
 
-```
     xSemaphoreGive(
         g_modbus_mutex
     );
 }
-```
 
 }
 
@@ -119,7 +116,6 @@ void *parameter
 {
 (void)parameter;
 
-```
 gpio_init(
     Config::CO2_VALVE_PIN
 );
@@ -238,6 +234,5 @@ while (true)
         )
     );
 }
-```
 
 }

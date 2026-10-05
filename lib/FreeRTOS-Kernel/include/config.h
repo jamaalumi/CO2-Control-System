@@ -11,7 +11,7 @@ constexpr uint16_t DEFAULT_CO2_SETPOINT_PPM = 1000;
 constexpr uint16_t MAX_CO2_SETPOINT_PPM = 1500;
 constexpr uint16_t SAFETY_CO2_PPM = 2000;
 
-```
+
 constexpr uint32_t CO2_VALVE_ON_MS = 1000;
 constexpr uint32_t CO2_VALVE_MIN_OFF_MS = 30000;
 
@@ -42,7 +42,7 @@ constexpr uint32_t UI_PERIOD_MS = 100;
 constexpr uint32_t NETWORK_PERIOD_MS = 10000;
 
 constexpr uint32_t SETTINGS_MAGIC = 0x434F3243;
-```
+
 
 }
 
