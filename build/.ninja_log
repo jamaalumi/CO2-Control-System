@@ -11,3 +11,9 @@
 635	967	8128921010613868	CMakeFiles/CO2-Control-System.dir/lib/FreeRTOS-Kernel/portable/tasks.c.obj	6c6549ec5e235b57
 942	1198	8128921013804818	CMakeFiles/CO2-Control-System.dir/lib/FreeRTOS-Kernel/portable/list.c.obj	43d4593ae971f44f
 974	1249	8128921014086839	CMakeFiles/CO2-Control-System.dir/lib/FreeRTOS-Kernel/portable/timers.c.obj	30c5d07c4678e9f6
+168	520	8128921216053364	CMakeFiles/CO2-Control-System.dir/lib/FreeRTOS-Kernel/portable/event_groups.c.obj	f2b2b509866dd7ac
+183	537	8128921216195514	CMakeFiles/CO2-Control-System.dir/lib/FreeRTOS-Kernel/portable/stream_buffer.c.obj	1b955ed03c6ed626
+541	783	8128921219781190	CMakeFiles/CO2-Control-System.dir/lib/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.obj	ed242df54496a4d5
+525	856	8128921219628190	CMakeFiles/CO2-Control-System.dir/lib/FreeRTOS-Kernel/portable/GCC/MemMang/heap_4.c.obj	ff18703607c24f26
+158	714	8128926289368418	CMakeFiles/CO2-Control-System.dir/C_/Users/jamaa/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj	d2165c9fc2a64711
+178	922	8128926289573195	CMakeFiles/CO2-Control-System.dir/C_/Users/jamaa/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj	8290e7edba399127
