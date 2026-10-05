@@ -6,14 +6,24 @@ project(CO2_Control_System C CXX ASM)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 pico_sdk_init()
+
+# ============================================================
+# FreeRTOS
+# ============================================================
 
 set(FREERTOS_KERNEL_PATH
     ${CMAKE_CURRENT_LIST_DIR}/lib/FreeRTOS-Kernel
 )
 
+# ============================================================
+# Application
+# ============================================================
+
 add_executable(CO2-Control-System
+
     src/main.cpp
     src/app.cpp
     src/modbus.cpp
@@ -23,25 +33,42 @@ add_executable(CO2-Control-System
     src/network.cpp
     src/storage.cpp
 
-    ${FREERTOS_KERNEL_PATH}/portable/tasks.c
-    ${FREERTOS_KERNEL_PATH}/portable/queue.c
-    ${FREERTOS_KERNEL_PATH}/portable/list.c
-    ${FREERTOS_KERNEL_PATH}/portable/timers.c
-    ${FREERTOS_KERNEL_PATH}/portable/event_groups.c
-    ${FREERTOS_KERNEL_PATH}/portable/stream_buffer.c
+    # FreeRTOS kernel
+    ${FREERTOS_KERNEL_PATH}/tasks.c
+    ${FREERTOS_KERNEL_PATH}/queue.c
+    ${FREERTOS_KERNEL_PATH}/list.c
+    ${FREERTOS_KERNEL_PATH}/timers.c
+    ${FREERTOS_KERNEL_PATH}/event_groups.c
+    ${FREERTOS_KERNEL_PATH}/stream_buffer.c
 
-    ${FREERTOS_KERNEL_PATH}/portable/GCC/MemMang/heap_4.c
-    ${FREERTOS_KERNEL_PATH}/portable/GCC/ARM_CM0/port.c
+    # FreeRTOS heap
+    ${FREERTOS_KERNEL_PATH}/portable/MemMang/heap_4.c
+
+    # RP2040 FreeRTOS port
+    ${FREERTOS_KERNEL_PATH}/portable/ThirdParty/GCC/RP2040/port.c
 )
+
+# ============================================================
+# Include directories
+# ============================================================
 
 target_include_directories(CO2-Control-System PRIVATE
+
     ${CMAKE_CURRENT_LIST_DIR}/include
+
     ${FREERTOS_KERNEL_PATH}/include
-    ${FREERTOS_KERNEL_PATH}/portable/GCC/ARM_CM0
+
+    ${FREERTOS_KERNEL_PATH}/portable/ThirdParty/GCC/RP2040
 )
 
+# ============================================================
+# Pico SDK libraries
+# ============================================================
+
 target_link_libraries(CO2-Control-System
+
     pico_stdlib
+
     hardware_gpio
     hardware_timer
     hardware_uart
@@ -50,8 +77,15 @@ target_link_libraries(CO2-Control-System
     hardware_sync
 )
 
+# ============================================================
+# USB serial
+# ============================================================
+
 pico_enable_stdio_usb(CO2-Control-System 1)
 pico_enable_stdio_uart(CO2-Control-System 0)
 
-pico_add_bin_output(CO2-Control-System)
-pico_add_hex_output(CO2-Control-System)
+# ============================================================
+# Generate UF2 / BIN / HEX
+# ============================================================
+
+pico_add_extra_outputs(CO2-Control-System)

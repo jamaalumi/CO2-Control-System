@@ -12,7 +12,7 @@ namespace Config
     // ========================================================
 
     static uart_inst_t* const MODBUS_UART = uart1;
-
+    
     constexpr uint32_t MODBUS_BAUD = 9600;
     constexpr uint32_t MODBUS_BAUD_RATE = 9600;
 
@@ -102,7 +102,7 @@ namespace Config
     constexpr uint32_t UI_TASK_STACK_SIZE = 512;
     constexpr uint32_t NETWORK_TASK_STACK_SIZE = 512;
     constexpr uint32_t MODBUS_TASK_STACK_SIZE = 512;
-
+    constexpr uint32_t SETTINGS_MAGIC = 0x434F3243;
 
     // ========================================================
     // TASK PRIORITIES
