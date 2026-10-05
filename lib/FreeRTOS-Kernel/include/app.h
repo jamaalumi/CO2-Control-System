@@ -7,6 +7,7 @@
 #include "queue.h"
 #include "semphr.h"
 
+
 // ============================================================
 // SHARED SENSOR DATA
 // ============================================================
@@ -14,9 +15,30 @@
 struct SensorData
 {
     float co2_ppm;
-    float temperature;
-    float humidity;
+
+    float temperature_c;
+
+    float humidity_percent;
+
+    float pressure_pa;
+
+    uint32_t fan_pulse_count;
+
+    bool fan_running;
+
+    uint32_t timestamp_ms;
 };
+
+
+// ============================================================
+// CONTROLLER SETTINGS
+// ============================================================
+
+struct ControllerSettings
+{
+    uint16_t co2_setpoint_ppm;
+};
+
 
 // ============================================================
 // GLOBAL SHARED DATA
@@ -24,25 +46,26 @@ struct SensorData
 
 extern SensorData g_sensor_data;
 
+extern ControllerSettings g_settings;
+
+
 // ============================================================
 // FREERTOS SYNCHRONIZATION OBJECTS
 // ============================================================
 
-// Protects g_sensor_data
 extern SemaphoreHandle_t g_sensor_mutex;
 
-// Protects Modbus communication
 extern SemaphoreHandle_t g_modbus_mutex;
+
 
 // ============================================================
 // FREERTOS QUEUES
 // ============================================================
 
-// CO2 setpoint queue
 extern QueueHandle_t g_setpoint_queue;
 
-// UI event queue
 extern QueueHandle_t g_ui_event_queue;
+
 
 // ============================================================
 // TASK FUNCTIONS
@@ -56,17 +79,22 @@ void uiTask(void *pvParameters);
 
 void modbusTask(void *pvParameters);
 
+void networkTask(void *pvParameters);
+
+
 // ============================================================
 // SENSOR FUNCTIONS
 // ============================================================
 
 bool readSensors(SensorData &data);
 
+
 // ============================================================
 // CONTROLLER FUNCTIONS
 // ============================================================
 
 void updateController(const SensorData &data);
+
 
 // ============================================================
 // UI EVENTS
@@ -75,8 +103,12 @@ void updateController(const SensorData &data);
 enum class UIEvent : uint8_t
 {
     NONE = 0,
+
     BUTTON_UP,
+
     BUTTON_DOWN,
+
     BUTTON_SELECT,
+
     BUTTON_BACK
 };
