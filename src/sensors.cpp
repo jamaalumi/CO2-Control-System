@@ -24,8 +24,8 @@ float &pressure_pa
 * SDA: GPIO14
 * SCL: GPIO15
 *
-* Exact command and scale conversion should be taken
-* from the datasheet revision used by the project.
+* Exact command and scale conversion will be
+* implemented from the sensor datasheet.
 */
 
 ```

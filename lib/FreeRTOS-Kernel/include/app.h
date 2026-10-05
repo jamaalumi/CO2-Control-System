@@ -11,7 +11,7 @@ struct SensorData
 {
 uint16_t co2_ppm;
 
-```
+
 float temperature_c;
 float humidity_percent;
 float pressure_pa;
