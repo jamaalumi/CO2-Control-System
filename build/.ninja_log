@@ -1,0 +1,13 @@
+# ninja log v7
+33	133	8128921004561851	pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.obj	a74c466f52825906
+137	357	8128921007667861	pico-sdk/src/rp2040/boot_stage2/bs2_default.elf	5c5c9dbccea49f64
+137	357	8128921007667861	pico-sdk/src/rp2040/boot_stage2/bs2_default.dis	5c5c9dbccea49f64
+137	357	8128921007667861	C:/Users/jamaa/CO2-Control-System/build/pico-sdk/src/rp2040/boot_stage2/bs2_default.dis	5c5c9dbccea49f64
+357	412	8128921008299825	pico-sdk/src/rp2040/boot_stage2/bs2_default.bin	9207f23a5dff6289
+357	412	8128921008299825	C:/Users/jamaa/CO2-Control-System/build/pico-sdk/src/rp2040/boot_stage2/bs2_default.bin	9207f23a5dff6289
+414	533	8128921009435504	pico-sdk/src/rp2040/boot_stage2/bs2_default_padded_checksummed.S	e5dae1974758b999
+414	533	8128921009435504	C:/Users/jamaa/CO2-Control-System/build/pico-sdk/src/rp2040/boot_stage2/bs2_default_padded_checksummed.S	e5dae1974758b999
+648	932	8128921010754002	CMakeFiles/CO2-Control-System.dir/lib/FreeRTOS-Kernel/portable/queue.c.obj	9cdb43f4eee11030
+635	967	8128921010613868	CMakeFiles/CO2-Control-System.dir/lib/FreeRTOS-Kernel/portable/tasks.c.obj	6c6549ec5e235b57
+942	1198	8128921013804818	CMakeFiles/CO2-Control-System.dir/lib/FreeRTOS-Kernel/portable/list.c.obj	43d4593ae971f44f
+974	1249	8128921014086839	CMakeFiles/CO2-Control-System.dir/lib/FreeRTOS-Kernel/portable/timers.c.obj	30c5d07c4678e9f6
