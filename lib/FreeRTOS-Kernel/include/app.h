@@ -1,56 +1,82 @@
 #pragma once
 
+#include <stdint.h>
+
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
 #include "semphr.h"
 
-#ifndef APP_H
-#define APP_H
-
-#include "FreeRTOS.h"
-#include "semphr.h"
-#include "queue.h"
-
-#include <stdint.h>
+// ============================================================
+// SHARED SENSOR DATA
+// ============================================================
 
 struct SensorData
 {
-uint16_t co2_ppm;
-
-
-float temperature_c;
-float humidity_percent;
-float pressure_pa;
-
-uint32_t fan_pulse_count;
-
-bool fan_running;
-
-uint32_t timestamp_ms;
-
-
+    float co2_ppm;
+    float temperature;
+    float humidity;
 };
 
-struct ControllerSettings
-{
-uint16_t co2_setpoint_ppm;
-};
+// ============================================================
+// GLOBAL SHARED DATA
+// ============================================================
 
 extern SensorData g_sensor_data;
 
-extern ControllerSettings g_settings;
+// ============================================================
+// FREERTOS SYNCHRONIZATION OBJECTS
+// ============================================================
 
+// Protects g_sensor_data
 extern SemaphoreHandle_t g_sensor_mutex;
 
+// Protects Modbus communication
 extern SemaphoreHandle_t g_modbus_mutex;
 
+// ============================================================
+// FREERTOS QUEUES
+// ============================================================
+
+// CO2 setpoint queue
 extern QueueHandle_t g_setpoint_queue;
 
+// UI event queue
 extern QueueHandle_t g_ui_event_queue;
 
-void app_init();
+// ============================================================
+// TASK FUNCTIONS
+// ============================================================
 
-void app_start_tasks();
+void sensorTask(void *pvParameters);
 
-#endif
+void controllerTask(void *pvParameters);
+
+void uiTask(void *pvParameters);
+
+void modbusTask(void *pvParameters);
+
+// ============================================================
+// SENSOR FUNCTIONS
+// ============================================================
+
+bool readSensors(SensorData &data);
+
+// ============================================================
+// CONTROLLER FUNCTIONS
+// ============================================================
+
+void updateController(const SensorData &data);
+
+// ============================================================
+// UI EVENTS
+// ============================================================
+
+enum class UIEvent : uint8_t
+{
+    NONE = 0,
+    BUTTON_UP,
+    BUTTON_DOWN,
+    BUTTON_SELECT,
+    BUTTON_BACK
+};

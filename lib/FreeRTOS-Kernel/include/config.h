@@ -1,56 +1,76 @@
 #pragma once
 
-#include "FreeRTOS.h"
-#include "task.h"
+#include <stdint.h>
+
 #include "pico/stdlib.h"
 #include "hardware/uart.h"
 
-#ifndef CONFIG_H
-#define CONFIG_H
-
-#include <stdint.h>
-#include "hardware/gpio.h"
-#include "hardware/uart.h"
-
-namespace Config
-{
-constexpr uint16_t DEFAULT_CO2_SETPOINT_PPM = 1000;
-constexpr uint16_t MAX_CO2_SETPOINT_PPM = 1500;
-constexpr uint16_t SAFETY_CO2_PPM = 2000;
-
-
-constexpr uint32_t CO2_VALVE_ON_MS = 1000;
-constexpr uint32_t CO2_VALVE_MIN_OFF_MS = 30000;
-
-constexpr uint CO2_VALVE_PIN = 27;
-
-constexpr uint UI_BUTTON_PIN = 9;
+// ============================================================
+// UART / MODBUS CONFIGURATION
+// ============================================================
 
 #define MODBUS_UART uart1
 
-constexpr uint MODBUS_TX_PIN = 4;
-constexpr uint MODBUS_RX_PIN = 5;
-constexpr uint RS485_DE_PIN = 6;
+#define MODBUS_BAUD_RATE 9600
 
-constexpr uint32_t MODBUS_BAUD = 9600;
+#define MODBUS_TX_PIN 4
+#define MODBUS_RX_PIN 5
 
-constexpr uint8_t PRODUAL_ADDRESS = 1;
-constexpr uint8_t GMP252_ADDRESS = 240;
-constexpr uint8_t HMP60_ADDRESS = 241;
+// ============================================================
+// SENSOR CONFIGURATION
+// ============================================================
 
-constexpr uint8_t SDP610_I2C_ADDRESS = 0x40;
+#define SENSOR_TASK_PERIOD_MS 1000
 
-constexpr uint SDP610_SDA_PIN = 14;
-constexpr uint SDP610_SCL_PIN = 15;
+// ============================================================
+// CONTROLLER CONFIGURATION
+// ============================================================
 
-constexpr uint32_t SENSOR_PERIOD_MS = 1000;
-constexpr uint32_t CONTROLLER_PERIOD_MS = 250;
-constexpr uint32_t UI_PERIOD_MS = 100;
-constexpr uint32_t NETWORK_PERIOD_MS = 10000;
+#define CONTROLLER_TASK_PERIOD_MS 100
 
-constexpr uint32_t SETTINGS_MAGIC = 0x434F3243;
+// CO2 limits in ppm
+#define CO2_MIN_PPM 800
+#define CO2_MAX_PPM 1200
 
+// Safety limit
+#define CO2_SAFETY_LIMIT_PPM 1500
 
-}
+// ============================================================
+// UI CONFIGURATION
+// ============================================================
 
-#endif
+#define UI_TASK_PERIOD_MS 100
+
+// ============================================================
+// QUEUE CONFIGURATION
+// ============================================================
+
+#define SETPOINT_QUEUE_LENGTH 5
+#define UI_EVENT_QUEUE_LENGTH 10
+
+// ============================================================
+// GPIO CONFIGURATION
+// ============================================================
+
+// Ventilation fan
+#define FAN_PIN 15
+
+// CO2 injection valve
+#define CO2_VALVE_PIN 14
+
+// Optional status LED
+#define LED_PIN 25
+
+// ============================================================
+// STACK / PRIORITY CONFIGURATION
+// ============================================================
+
+#define SENSOR_TASK_STACK_SIZE 512
+#define CONTROLLER_TASK_STACK_SIZE 512
+#define UI_TASK_STACK_SIZE 512
+#define MODBUS_TASK_STACK_SIZE 512
+
+#define SENSOR_TASK_PRIORITY 2
+#define CONTROLLER_TASK_PRIORITY 3
+#define UI_TASK_PRIORITY 1
+#define MODBUS_TASK_PRIORITY 2
