@@ -136,3 +136,17 @@ if (result != pdPASS)
     task_creation_error("NETWORK");
 
 }
+
+extern "C" void vApplicationStackOverflowHook(
+    TaskHandle_t xTask,
+    char *pcTaskName
+)
+{
+    (void)xTask;
+    (void)pcTaskName;
+
+    while (true)
+    {
+        tight_loop_contents();
+    }
+}

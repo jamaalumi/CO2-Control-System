@@ -32,7 +32,7 @@ namespace Config
     constexpr uint MODBUS_TX_PIN = 4;
     constexpr uint MODBUS_RX_PIN = 5;
     constexpr uint RS485_DE_PIN = 6;
-    uart_inst_t* MODBUS_UART = uart1;
+    inline uart_inst_t* MODBUS_UART = uart1;
     constexpr uint32_t MODBUS_BAUD = 9600;
 
 

@@ -126,7 +126,6 @@ UBaseType_t uxCriticalNestings[ configNUMBER_OF_CORES ] = { 0 };
 #if ( configSUPPORT_PICO_SYNC_INTEROP == 1 )
     #include "pico/lock_core.h"
     #include "event_groups.h"
-#include "hardware/structs/sio.h"
     #if configSUPPORT_STATIC_ALLOCATION
         static StaticEventGroup_t xStaticEventGroup;
         #define pEventGroup    ( &xStaticEventGroup )

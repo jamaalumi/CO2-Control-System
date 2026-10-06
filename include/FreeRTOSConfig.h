@@ -69,7 +69,7 @@
  * Interrupt / Cortex-M configuration
  * ============================================================ */
 
-#define configUSE_PORT_OPTIMISED_TASK_SELECTION 1
+#define configUSE_PORT_OPTIMISED_TASK_SELECTION 0
 
 #define configENABLE_FPU                        0
 #define configENABLE_MPU                        0
@@ -78,9 +78,7 @@
 /* ============================================================
  * FreeRTOS version information
  * ============================================================ */
-
-#define tskKERNEL_VERSION_MAJOR                10
-#define tskKERNEL_VERSION_MINOR                5
 #define tskKERNEL_VERSION_BUILD                0
 
 #endif /* FREERTOS_CONFIG_H */
+
