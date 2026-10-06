@@ -1,7 +1,6 @@
 build/
 .vscode/
-.idea/
+*.o
 *.elf
 *.uf2
-*.bin
-*.hex
+*.map
